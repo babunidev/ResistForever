@@ -1,10 +1,10 @@
 # ResistForever — developer and AI collaborator instructions
 
-**Creative author and final decision-maker:** Babuni.dev. **Target:** World of Warcraft: Forever **1.60.1**, addon interface **16001**, manifest **1.0.2**. **License:** [MIT](LICENSE).
+**Human creative / final decision-maker:** Babuni. **Target:** World of Warcraft: Forever **1.60.1**, addon interface **16001**, manifest **1.0.2**. **License:** [MIT](LICENSE).
 
 ## Preserve the original idea
 
-The tool is a **small educational extension to Blizzard's existing character/pet resistance tooltip**. Do not replace the character sheet, invent a gear optimizer, make combat decisions for the player, or attribute the creator's original idea to AI. The addon must retain five schools (Fire/Nature/Frost/Shadow/Arcane), current/target attacker-level contexts, clearly labeled base misses, and **10%-step direct-spell partial reductions** unless Babuni.dev approves changes.
+The tool is a **small educational extension to Blizzard's existing character/pet resistance tooltip**. Do not replace the character sheet, invent a gear optimizer, make combat decisions for the player, or attribute the creative's original idea to AI. The addon must retain five schools (Fire/Nature/Frost/Shadow/Arcane), current/target attacker-level contexts, clearly labeled base misses, and **10%-step direct-spell partial reductions** unless Babuni approves changes.
 
 Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` files, the entire `ResistForever.lua` and its TOC before touching code.
 
@@ -31,3 +31,7 @@ Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` f
 6. Avoid publishing private player names, selected target identity, real saved data, account details or raw chats. Use synthetic math examples.
 
 The October 27, 2026 repository audit is **documentation-only**. It does not approve formula edits or imply an in-game test.
+
+## Repository-local documentation standard
+
+Before writing or changing project documentation, read [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md). These rules travel with this repository and do not depend on the babuni.dev ChatGPT Project. Preserve all project-specific technical, creative, canon, safety, licensing, and historical rules in this file; follow the linked standard for public first-person narrative, human–AI attribution, concise development journals, decision records, and evidence-based verification. **Babuni** is the human creative; **babuni.dev** is the website/portfolio, not the person. Preserve third-party credits and historical legal notices. References above to a dated “documentation-only audit” describe that past task, not a permanent ban on later authorized implementation.
