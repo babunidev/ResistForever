@@ -24,10 +24,10 @@ Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` f
 ## Development process
 
 1. Record exact user request, goal and nonnegotiable constraints.
-2. Separate AI proposals/alternatives from *approved* creator decisions.
+2. Separate AI proposals/alternatives from *approved* creative decisions.
 3. Run pure math tests, manual UI checks and real combat-log comparisons where relevant; record environment and actual output. Mock tests do not substitute for the target client.
 4. For future changes update `README.md`, `CONCEPT.md`, `ROADMAP.md`, `CHANGELOG.md`, `AGENTS.md`, `docs/ARCHITECTURE.md`, `DESIGN.md`, `CONTENT.md`, `DECISIONS.md`, `DEVLOG.md`, `AI_COLLABORATION.md` as appropriate.
-5. Preserve original Babuni.dev authorship, earlier discarded models as history, and the **MIT LICENSE** with its notice.
+5. Preserve original Babuni authorship, earlier discarded models as history, and the **MIT LICENSE** with its notice.
 6. Avoid publishing private player names, selected target identity, real saved data, account details or raw chats. Use synthetic math examples.
 
 The October 27, 2026 repository audit is **documentation-only**. It does not approve formula edits or imply an in-game test.
