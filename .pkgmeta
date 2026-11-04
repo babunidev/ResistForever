@@ -1,3 +1,11 @@
 manual-changelog:
   filename: CHANGELOG.md
   markup-type: markdown
+
+ignore:
+  - AGENTS.md
+  - CONCEPT.md
+  - README.md
+  - ROADMAP.md
+  - docs
+  - tests

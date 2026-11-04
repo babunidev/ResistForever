@@ -89,4 +89,4 @@ Every relevant event retries hook installation, refreshes readable player/pet ca
 
 ## Packaging and test status
 
-Only `ResistForever.lua` and `ResistForever.toc` are required at runtime. `tests/math.lua` is development-only and loads the production Lua through a test-only early return before any WoW API initialization. GitHub releases **v1.0.1/v1.0.2** exist without attached ZIP artifacts. [LICENSE](../LICENSE) grants MIT terms and `.pkgmeta` names the manual changelog. Automated math checks do **not** substitute for combat-log calibration or successful UI behavior in-game.
+Only `ResistForever.lua` and `ResistForever.toc` are required at runtime. `tests/math.lua` is development-only and loads the production Lua through a test-only early return before any WoW API initialization. `.pkgmeta` excludes `tests/`, `docs/` and repository-only project documents from packaged addon ZIPs while retaining the runtime files, LICENSE and CHANGELOG. GitHub releases **v1.0.1/v1.0.2** exist without attached ZIP artifacts. Automated math checks do **not** substitute for combat-log calibration or successful UI behavior in-game.

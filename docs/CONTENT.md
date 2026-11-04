@@ -49,4 +49,4 @@ The program uses an in-memory `cache.level` table and school-indexed player/pet 
 - [`.pkgmeta`](../.pkgmeta): manual-changelog metadata.
 - [`LICENSE`](../LICENSE): existing **MIT License**, copyright Babuni.dev.
 
-`tests/math.lua` is the only development test file; no image, font or sound assets are bundled. The source uses Blizzard's existing stat atlases and tooltip fonts rather than bundled original media. GitHub v1.0.1 and v1.0.2 release entries have **no attached ZIP assets**.
+`tests/math.lua` is the only development test file; `.pkgmeta` excludes it, `docs/`, and repository-only project documents from packaged addon ZIPs. No image, font or sound assets are bundled. The source uses Blizzard's existing stat atlases and tooltip fonts rather than bundled original media. GitHub v1.0.1 and v1.0.2 release entries have **no attached ZIP assets**.
