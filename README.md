@@ -1,10 +1,16 @@
 # Resist Forever
 
-**Creator:** Babuni.dev · **Current version:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
+**Creative:** Babuni · **Current version:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
 
 **Resist Forever** explains how a character's or pet's magical resistance might affect **direct spell damage**. Hover **Fire, Nature, Frost, Shadow or Arcane resistance** in the character/pet panel to see the chance of each **10% damage-resisted outcome**, together with **base spell miss** against an attacker of a given level.
 
 It extends the existing Blizzard tooltip instead of replacing it, so the game's original resistance information stays visible.
+
+## Launch compatibility review
+
+On **November 4, 2026**, the addon was reviewed against the public WoW Forever UI source snapshot for **1.60.1.70790 / Interface 16001**. The Blizzard structures Resist Forever depends on are still present: `PaperDollStatTooltip`, `CharacterStatFrameScrollBoxIconElementMixin:Init`, the player and pet stat panes, resistance-row `numericValue`, and the four-value `UnitResistance` API. The current API documentation also retains secret-value restrictions, so the addon's guarded reads and cache fallback remain relevant.
+
+The current [wowsims/forever](https://github.com/wowsims/forever) model still uses the same **10%-step direct-spell resistance distribution**, **`R/(R+9L)`** average and **zero-floor level-based spell miss** adopted in 1.0.2. That is supporting research, not Blizzard server source. This review was **source-level only**: it does not claim a successful launch-client in-game test or combat-log validation.
 
 ## Install
 
@@ -35,7 +41,7 @@ The final **Base spell miss** row is a level-difference estimate **before any en
 
 A simple *model illustration*, **not an observed client combat test**: 90 resistance against a level-10 attacker has an average resisted fraction of `90 / (90 + 9 × 10) = 0.5`. Under the middle-range triangular distribution, its visible nonzero outcomes are **40% damage resisted: 25% chance; 50%: 50%; 60%: 25%**. At equal attacker/defender level, modeled base spell miss is **4%**. Actual gameplay differs with spell-specific mechanics and unobserved enemy stats.
 
-## Current Forever beta formulas
+## Current Forever model used by 1.0.2
 
 The source intentionally uses the October 20 **v1.0.2** formulas, not the earlier Classic model:
 
@@ -49,7 +55,7 @@ The source intentionally uses the October 20 **v1.0.2** formulas, not the earlie
 | Base spell miss, **d < 3** | `max(0, 4% + d × 1%)` |
 | Minimum unavoidable miss chance | **None assumed**: a calculated 0% is allowed and omitted from visible rows |
 
-These formulas reflect the **Forever beta model documented in the current code and v1.0.2 changelog**. They aren't an independently verified guarantee for every server state, spell or future patch. In particular:
+These formulas reflect the **Forever research model adopted in v1.0.2 and rechecked against current public research on November 4, 2026**. They aren't Blizzard server-source guarantees for every state, spell or future patch. In particular:
 
 - This is for **direct magical spell damage**, not binary resist checks, non-channeled periodic ticks, channel damage, or a spell-specific damage model. Source comments note those behave differently.
 - Enemy **spell penetration** and **spell-hit bonuses** are unknown, so displayed resistance/miss odds are baseline estimates, not exact personalized probabilities.
@@ -66,9 +72,9 @@ Changes in target, auras, pet state, equipment, resistance or level trigger atte
 
 ## History and limitations
 
-**September 28 — 1.0.0:** First implementation, initially using Classic-style resist outcome buckets. **October 12 — 1.0.1:** Pet support and an updated Classic PvP/PvE split for level-based misses. **October 20 — 1.0.2:** Replaced those estimates with the present Forever beta **10%-step resist and base spell miss** models. Those are genuine modeling revisions, not three simultaneous calculation modes.
+**September 28 — 1.0.0:** First implementation, initially using Classic-style resist outcome buckets. **October 12 — 1.0.1:** Pet support and an updated Classic PvP/PvE split for level-based misses. **October 20 — 1.0.2:** Replaced those estimates with the then-current Forever beta **10%-step resist and base spell miss** models. Those are genuine modeling revisions, not three simultaneous calculation modes.
 
-The repo contains only one runtime Lua file and a TOC, with a [.pkgmeta](.pkgmeta) pointer to the manual changelog. **No automated test script** was found in this repository during the October 27 documentation audit. No game-client test, combat-log statistical validation or runtime code change was performed here. The [MIT license](LICENSE) is preserved.
+The repo contains only one runtime Lua file and a TOC, with a [.pkgmeta](.pkgmeta) pointer to the manual changelog. **No automated test script** is present as of the November 4 launch review. The launch review verified public source/API compatibility only; no game-client test or combat-log statistical validation was performed. The [MIT license](LICENSE) is preserved.
 
 ## Portfolio and development documentation
 
@@ -77,4 +83,4 @@ The repo contains only one runtime Lua file and a TOC, with a [.pkgmeta](.pkgmet
 - [Design decisions and alternatives](docs/DECISIONS.md) · [Narrative development journal](docs/DEVLOG.md)
 - [Human–AI collaboration](docs/AI_COLLABORATION.md) · [Developer/AI rules](AGENTS.md)
 
-The original project idea and its creative direction belong to **Babuni.dev**. This documentation pass provides source interpretation and a publishable development record; it does not invent earlier conversations or claim verified combat behavior.
+The original project idea and its creative direction belong to **Babuni**. Documentation and AI-assisted implementation are recorded separately from that human creative direction; source review is not presented as verified combat behavior.

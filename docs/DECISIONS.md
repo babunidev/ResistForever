@@ -1,6 +1,6 @@
 # ResistForever — recorded decisions, revisions and alternatives
 
-**Creative decision-maker:** Babuni.dev. **Evidence standard:** Git diffs, source code and changelog; absent original design conversations aren't invented.
+**Creative decision-maker:** Babuni. **Evidence standard:** Git diffs, source code and changelog; absent original design conversations aren't invented.
 
 ## Actual implemented evolution
 
@@ -18,7 +18,7 @@ The first two formula models are **historical, not selectable alternatives** in 
 
 **Embedded tooltip vs independent calculator.** By reading the player's selected resistance row, the addon answers a question in context and avoids new persistent UI. It is limited to character/pet sheets and hypothetical attacker levels obtainable from the target.
 
-**10%-step distributions vs Classic buckets.** Current Forever beta assumptions require eleven discrete outcomes, not old 25/50/75% reductions. This improved model fidelity as understood at October 20, but needs ongoing validation as Forever evolves.
+**10%-step distributions vs Classic buckets.** The current Forever research model used by 1.0.2 requires eleven discrete outcomes, not old 25/50/75% reductions. This improved model fidelity as understood at October 20 and remained consistent with current public research on November 4, but still needs gameplay validation as Forever evolves.
 
 **Base miss vs combined hit prediction.** The current miss function is expressly **pre-spell-hit**. Showing it separately from partial resistance avoids falsely pretending to know enemy spell hit and penetration.
 
@@ -32,8 +32,8 @@ The first two formula models are **historical, not selectable alternatives** in 
 
 **MIT licensing:** The repository includes an actual [MIT LICENSE](../LICENSE), with Babuni.dev copyright. Do not claim unlicensed source or rewrite licensing terms during feature work.
 
-## Creator decisions still open
+## Creative decisions still open
 
 Would showing the 0% branch or average reduction make the math clearer? Should a target with unknown level be omitted (current) or assigned user-chosen level (proposal)? Should a pet cache clear on identity changes? Should future clients have locale text tables? Should formula changes be gated by verified version checks?
 
-These are **questions and AI-suggested tests**, not decisions already made by Babuni.dev. Any eventual choice should be recorded with reasoning, alternatives, code and actual verification.
+These are **questions and AI-suggested tests**, not decisions already made by Babuni. Any eventual choice should be recorded with reasoning, alternatives, code and actual verification.

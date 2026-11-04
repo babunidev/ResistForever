@@ -1,6 +1,6 @@
 # ResistForever — technical architecture and probability semantics
 
-**Inspected:** `ResistForever.lua` (583 lines including terminal line), `ResistForever.toc`, `.pkgmeta`, Git versions 1.0.0–1.0.2; October 27, 2026. **Static source review only.**
+**Inspected:** `ResistForever.lua`, `ResistForever.toc`, `.pkgmeta`, Git versions 1.0.0–1.0.2; documentation audit October 27, 2026, with a launch-source compatibility recheck on November 4, 2026. **Source review only; no in-game launch test.**
 
 ## Installed module and lifecycle
 
@@ -17,6 +17,14 @@ ResistForever.toc / Interface 16001 / Version 1.0.2
 ```
 
 No external library, SavedVariables, network messaging, persistent logs, slash commands or independently packaged test harness is present. `.pkgmeta` points to `CHANGELOG.md` as a manual changelog for release packaging metadata.
+
+## November 4 launch-source compatibility recheck
+
+The public [Gethe/wow-ui-source](https://github.com/Gethe/wow-ui-source) Forever branch reports **1.60.1.70790**. Its Camelot paper-doll sources still contain `PaperDollStatTooltip`, `CharacterStatFrameScrollBoxIconElementMixin:Init`, `CharacterStatsPaneScrollBox`, `CharacterStatsPanePetScrollBox` and resistance-row `numericValue`, matching the integration points used by ResistForever.
+
+Generated unit API documentation still defines `UnitResistance(unit, damageClass)` with four numeric returns: base, real, effective and bonus resistance. It remains subject to secret-value restrictions. This supports the current guarded-read architecture but does not prove every runtime state is safe until tested in the launch client.
+
+The current [wowsims/forever](https://github.com/wowsims/forever) source still models direct magical resistance with `R/(R+9L)`, 10% partial-resist steps and level-based base spell miss without an unavoidable 1% floor. That remains research evidence rather than Blizzard server source.
 
 ## School and hover-row identity
 

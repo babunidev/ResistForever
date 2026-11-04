@@ -1,18 +1,18 @@
 # ResistForever — narrative development journal
 
-**Project creator and creative director:** Babuni.dev  
-**Retrospective date:** October 27, 2026  
-**Evidence:** actual Git history, README/CHANGELOG, the 583-line Lua/TOC and current GitHub release records; relevant creative discussions available in the Babuni.dev project. The complete original design conversation is not reproduced or invented. Earlier code-line authorship is not inferred from Git alone.
+**Project creative and creative director:** Babuni  
+**Retrospective date:** October 27, 2026 · **Updated:** November 4, 2026  
+**Evidence:** actual Git history, README/CHANGELOG, the Lua/TOC, current GitHub release records and the November 4 public Forever UI-source compatibility review. Relevant project conversations inform the creative record where available. The complete original design conversation is not reproduced or invented. Earlier code-line authorship is not inferred from Git alone.
 
 ## The question behind a resistance number
 
 A number like 90 Fire resistance occupies a very small piece of the World of Warcraft character sheet. But that number prompts more questions than it answers: Does it make the player less likely to be hit by a Fire spell? Does it reduce the damage when a spell lands? If it reduces damage, how much? Does the opponent's level make the investment stronger or weaker?
 
-**Resist Forever** reflects Babuni.dev's interest in making mechanics visible through the game's own interface. Rather than replacing the character pane or inventing a separate calculator that a player has to remember to open, the addon adds a small explanatory table when the player hovers Fire, Nature, Frost, Shadow or Arcane resistance. The same existing tooltip remains in place, and the custom detail follows it.
+**Resist Forever** reflects Babuni's interest in making mechanics visible through the game's own interface. Rather than replacing the character pane or inventing a separate calculator that a player has to remember to open, the addon adds a small explanatory table when the player hovers Fire, Nature, Frost, Shadow or Arcane resistance. The same existing tooltip remains in place, and the custom detail follows it.
 
 That restrained design is part of the creative work. The goal is to help the player *interpret the character*, not to perform a combat rotation or turn statistics into a recommendation engine. The tool is particularly appropriate to **World of Warcraft: Forever**, where the resistance rules were changing during the beta period and old Classic assumptions could give confidently incorrect probabilities.
 
-The ownership of this original purpose and its creative direction belongs to **Babuni.dev**. The documentation assistant's later explanations and mathematical summaries are a separate contribution; the Git tree doesn't tell us who typed every earlier implementation function.
+The ownership of this original purpose and its creative direction belongs to **Babuni**. The documentation assistant's later explanations and mathematical summaries are a separate contribution; the Git tree doesn't tell us who typed every earlier implementation function.
 
 ## September 28, 2026 — first public code and an initial theory
 
@@ -64,9 +64,17 @@ On October 26, attribution commits set the TOC and README author to **Babuni.dev
 
 The October 27 documentation audit inspected the current Lua, manifest, original version changelog, Git revisions and release metadata. It confirmed **v1.0.1 and v1.0.2 GitHub releases exist but have no attached binary/ZIP assets**, and expanded eleven Markdown documents to preserve the story behind the numbers.
 
-**Creator contribution:** Babuni.dev conceived and directed the tooltip-explanation project and its evolution. **AI contribution in this session:** code/history review, mathematical interpretation, architecture/UX documentation, source-grounded roadmap and editorial collaboration record. Some prior user discussions in the project addressed the v1.0.2 formula update, but without a complete original back-and-forth and commit attribution this journal does not invent who proposed every mathematical step.
+**Creative contribution:** Babuni conceived and directed the tooltip-explanation project and its evolution. **AI contribution in this session:** code/history review, mathematical interpretation, architecture/UX documentation, source-grounded roadmap and editorial collaboration record. Some prior project discussions addressed the v1.0.2 formula update, but without a complete original back-and-forth and commit attribution this journal does not invent who proposed every mathematical step.
 
 **Actually verified here:** current source formulas, event/UI structure, commit chronology, release metadata, documentation paths and unchanged runtime blobs after the commit. **Not performed:** installing Forever, hovering a live tooltip, exercising secret-value restrictions in game, performing a combat-log probability experiment, or executing automated tests. No tests were committed in the inspected source tree.
+
+## November 4, 2026 — launch-day compatibility review
+
+With Forever going live, I wanted Resist Forever checked against the launch UI before changing its mechanics again. The review compared the addon's integration points with the public **1.60.1.70790** Forever UI source and found the paper-doll tooltip hook, resistance-row initializer, player/pet stat panes, row numeric values and `UnitResistance` API structure still in place.
+
+Current public `wowsims/forever` research also continues to use the same 10%-step direct-spell resistance model and zero-floor level-based spell miss adopted in 1.0.2. That was enough to leave the runtime formulas untouched for this documentation pass, while keeping their research-derived status explicit.
+
+No in-game launch-client test, combat-log validation, version bump, tag or public release was performed as part of this review.
 
 ## A next chapter grounded in the game
 

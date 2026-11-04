@@ -1,6 +1,6 @@
 # ResistForever — verification roadmap and open decisions
 
-**Creator / decision authority:** Babuni.dev. **Current version:** 1.0.2, interface 16001. This is a prioritized verification proposal, **not approval of new runtime features**.
+**Creative / decision authority:** Babuni. **Current version:** 1.0.2, interface 16001. This is a prioritized verification proposal, **not approval of new runtime features**.
 
 ## Implemented in current source
 
@@ -20,12 +20,12 @@
 3. Test edge transitions exactly **a=0.10**, just above 0.10, **a=0.90** and just below 0.90, including potential discontinuities and tooltip rounding.
 4. Verify miss with level differences **-5, -4, -3, -2, 0, 1, 2, 3, 4, 10** and distinguish **calculated 1%** from an *unavoidable miss floor*. In source, 0% is possible.
 5. Compare representative actual **direct spell** combat logs across resistances and level pairs with the v1.0.2 model. Separate **miss** from **0% resisted hit** in analysis.
-6. Independently verify the beta formula and assumed 17% `d ≥ 3` plateau against the exact Forever version intended. The source cites a wowsims/Forever combat-log model, but this documentation audit didn't re-run that evidence.
+6. Continue validating the current Forever research formula and 17% `d ≥ 3` plateau against actual launch combat logs. A November 4 source review confirmed current `wowsims/forever` still uses the same model, but that is not independent server-side verification.
 7. Run separate tests for dots, channeled and binary spells to ensure no tooltip text suggests the direct-spell distribution applies to them.
 
 ## P1 — UI and pet behavior
 
-8. In a live **Forever 1.60.1 / interface 16001** client, hover all five schools on character and pet sheets; confirm `CharacterStatsPaneScrollBox` and `CharacterStatsPanePetScrollBox` recognize rows without attaching to unrelated frame tooltips.
+8. In a live **Forever 1.60.1 / interface 16001** client, hover all five schools on character and pet sheets; confirm `CharacterStatsPaneScrollBox` and `CharacterStatsPanePetScrollBox` recognize rows without attaching to unrelated frame tooltips. The November 4 source review covered build **1.60.1.70790**, but this live test remains pending.
 9. Verify native tooltip remains intact, expected Resistance rows are appended once, and repeated hovers/update events do not stack duplicates or recurse.
 10. Compare a same-level target, a higher/lower-level target, a self-target and a skull/unknown-level target. Check contextual attacker level and name presentation.
 11. Verify `UnitResistance` effective/real fallback and row `numericValue` priority under changing gear, pets, buffs and debuffs.
@@ -38,9 +38,9 @@
 
 16. Add bounded pure-Lua test fixtures for formula/rounding and mocked tooltip/context handling if justified; tests must be run and recorded, not merely committed.
 17. Confirm release packaging/update workflow. GitHub v1.0.2 exists **without a release asset**, while `.pkgmeta` contains manual-changelog metadata; no CurseForge upload/state was independently verified here.
-18. Test exact 1.60.1 build, secret-value API changes, and possible future Forever resistance formula revisions before promising other client versions.
-19. Preserve Babuni.dev's existing [MIT license](LICENSE) and accurate source attribution.
+18. Keep checking exact 1.60.1 builds, secret-value API changes and future Forever resistance revisions before promising compatibility beyond what has been verified. Public source compatibility was rechecked at **1.60.1.70790**; live launch-client behavior still needs confirmation.
+19. Preserve the repository's existing [MIT license](LICENSE), its Babuni.dev copyright notice and accurate source attribution.
 
-## Pending creator decisions (not approved)
+## Pending creative decisions (not approved)
 
-Would a one-line **average direct-spell damage resisted** summary improve comprehension? Should the 0% outcome be shown explicitly, or remain hidden for visual economy? Would a small “direct spells only” subtitle help? Should players choose another hypothetical attacker level independently of targeting? Is a dedicated test suite worth the maintenance? Which locales/Forever revisions should be officially supported? These are **proposals only**; do not replace the current authored interface without Babuni.dev's decision.
+Would a one-line **average direct-spell damage resisted** summary improve comprehension? Should the 0% outcome be shown explicitly, or remain hidden for visual economy? Would a small “direct spells only” subtitle help? Should players choose another hypothetical attacker level independently of targeting? Is a dedicated test suite worth the maintenance? Which locales/Forever revisions should be officially supported? These are **proposals only**; do not replace the current authored interface without Babuni's decision.

@@ -1,6 +1,6 @@
 # ResistForever — concept and creative direction
 
-**Human creator and creative director:** Babuni.dev  
+**Human creative and creative director:** Babuni  
 **Environment:** World of Warcraft: Forever 1.60.1 / UI interface 16001.
 
 ## Numbers the character sheet hints at, but does not explain
@@ -33,4 +33,4 @@ The current program is shaped by a visible calculation evolution. The initial la
 
 That last change is not merely a formatting update: it changed what the numbers *mean*. The source and changelog establish the revision; they don't expose every discussion or prove the underlying combat model against a live test in this review.
 
-**Authorship:** Babuni.dev retains original direction and creative authority. The current assistant wrote this retrospective concept summary from actual code/Git evidence; proposed future enhancements are not approved by that act.
+**Authorship:** Babuni retains original direction and creative authority. The assistant contribution in this retrospective is source interpretation and documentation; proposed future enhancements are not approved by that act.

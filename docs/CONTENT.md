@@ -1,6 +1,6 @@
 # ResistForever — content inventory, formulas and player data
 
-**Creator:** Babuni.dev · **Current release:** 1.0.2.
+**Creative:** Babuni · **Current release:** 1.0.2.
 
 ## The five resistance subjects
 

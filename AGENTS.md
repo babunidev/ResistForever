@@ -10,7 +10,7 @@ Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` f
 
 ## Gameplay and data constraints
 
-- The current direct-spell **Forever beta** average is **`R/(R+9L)`** (positive readable defender R, hypothetical attacker level L). Do not silently revert to Classic buckets or earlier UI `ExpectedSpellResistance` helper math.
+- The current direct-spell **Forever research model** used by the addon is **`R/(R+9L)`** (positive readable defender R, hypothetical attacker level L). Do not silently revert to Classic buckets or earlier UI `ExpectedSpellResistance` helper math. Reverify this model against the exact Forever build before changing or presenting it as authoritative server behavior.
 - Internal probabilities include **0,10,...100%**; tooltip intentionally displays only positive nonzero 10%–100% results after epsilon/rounding checks. Preserve edge cases at mean ≤0.10/≥0.90.
 - **Base spell miss** is level-difference-only: defender minus attacker **≥3 → 17%**, else `max(0,4%+diff%)`. There is **no unavoidable 1% floor**. Enemy spell hit unknown; don't market it as final chance to miss.
 - This estimate is for **direct magical damage only**, not periodic ticks, channels, binary spell mechanics or enemy spell penetration. Verify formulas against real Forever build before claiming authoritative combat precision.

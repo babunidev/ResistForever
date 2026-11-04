@@ -1,6 +1,6 @@
 # ResistForever — information and tooltip interaction design
 
-**Creator and creative director:** Babuni.dev.
+**Human creative / creative director:** Babuni.
 
 ## The player is already looking at the right place
 

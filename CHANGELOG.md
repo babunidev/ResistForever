@@ -1,7 +1,16 @@
 # Resist Forever — source and release changelog
 
-**Creator / copyright:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
+**Creative:** Babuni · **Copyright notice:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
 **Method:** Preserves original version facts and adds dated Git context; release or source existence is not proof of independently tested game behavior.
+
+## Unreleased — November 4, 2026: launch documentation polish
+
+- Rechecked the public WoW Forever UI source snapshot for **1.60.1.70790 / Interface 16001** before launch.
+- Confirmed the current source still exposes the addon's required paper-doll hooks and resistance-row data: `PaperDollStatTooltip`, `CharacterStatFrameScrollBoxIconElementMixin:Init`, player/pet stat panes and row `numericValue`.
+- Confirmed current generated API documentation still defines `UnitResistance(unit, damageClass)` with base, real, effective and bonus resistance returns plus secret-value restrictions.
+- Rechecked current `wowsims/forever` research: its direct-spell resistance and level-based base-miss model still matches the calculations used by 1.0.2.
+- Polished current documentation terminology so **Babuni** identifies the human creative while historical/legal **Babuni.dev** notices remain intact where they are part of the repository record.
+- Documentation only: **no Lua, TOC version or public release changed**, and no in-game launch-client or combat-log test was claimed.
 
 ## October 27, 2026 — portfolio documentation expansion
 
@@ -41,7 +50,7 @@
 - First public code and TOC for **character-sheet resistance hover** with partial damage resist probabilities and spell-miss estimates.
 - Initial presentation used earlier Classic outcome categories and early Forever UI-derived averages; the exact mechanics were revised in later versions.
 
-## October 26 — creator attribution and documentation scaffold
+## October 26 — author attribution and documentation scaffold
 
 - `eeb7d693ea4f`: standardize manifest author as **Babuni.dev**.
 - `653b525d3448`: credit Babuni.dev in README.
@@ -49,4 +58,4 @@
 - `61460f5d806f`: add preliminary project concept/architecture/roadmap/decisions/journal.
 - `cf910d4aa211`: link the history documents from README.
 
-Original creative authorship is Babuni.dev. The expanded October 27 editorial audit records the history and uncertainty without modifying game behavior.
+Original creative direction belongs to Babuni. The historical Babuni.dev author/copyright fields above are preserved as recorded facts; the expanded October 27 editorial audit records the history and uncertainty without modifying game behavior.
