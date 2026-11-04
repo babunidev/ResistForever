@@ -1,6 +1,6 @@
 # ResistForever — content inventory, formulas and player data
 
-**Creative:** Babuni · **Release candidate:** 1.0.3 · **Latest GitHub release:** 1.0.2.
+**Creative:** Babuni · **Current CurseForge release:** 1.0.3 · **Latest Git tag:** v1.0.3 · **Latest GitHub Release object:** v1.0.2.
 
 ## The five resistance subjects
 
@@ -44,9 +44,9 @@ The program uses an in-memory `cache.level` table and school-indexed player/pet 
 ## Source and licensing inventory
 
 - [`ResistForever.lua`](../ResistForever.lua): entire runtime/UI and current formula.
-- [`ResistForever.toc`](../ResistForever.toc): interface 16001, development version 1.0.3 and author credit.
+- [`ResistForever.toc`](../ResistForever.toc): interface 16001, released version 1.0.3 and author credit.
 - [`CHANGELOG.md`](../CHANGELOG.md): original version sequence plus audit chronology.
 - [`.pkgmeta`](../.pkgmeta): manual-changelog metadata.
 - [`LICENSE`](../LICENSE): existing **MIT License**, copyright Babuni.dev.
 
-`tests/math.lua` is the only development test file. `.pkgmeta` excludes it, `docs/`, README/concept/roadmap/agent material, and `CHANGELOG.md` from packaged addon ZIPs. `CHANGELOG.md` remains the manual release-note source. The intended player package is exactly `ResistForever.lua`, `ResistForever.toc`, and `LICENSE`. No image, font or sound assets are bundled. The source uses Blizzard's existing stat atlases and tooltip fonts rather than bundled original media. GitHub v1.0.1 and v1.0.2 release entries have **no attached ZIP assets**.
+`tests/math.lua` is the only development test file. `.pkgmeta` excludes it, `docs/`, README/concept/roadmap/agent material, and `CHANGELOG.md` from packaged addon ZIPs. `CHANGELOG.md` remains the manual release-note source. The intended player package is exactly `ResistForever.lua`, `ResistForever.toc`, and `LICENSE`. CurseForge v1.0.3 is confirmed Approved/Release for Forever 1.60.1, but the published ZIP file listing has not yet been independently inspected. No image, font or sound assets are bundled. The source uses Blizzard's existing stat atlases and tooltip fonts rather than bundled original media.

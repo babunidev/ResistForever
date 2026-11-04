@@ -78,9 +78,11 @@ No in-game launch-client test, combat-log validation, version bump, tag or publi
 
 ### 1.0.3 development polish
 
-A small launch-polish pass followed the documentation review. The resistance model stayed unchanged; the code instead hardened secret target-name handling, clears stale pet cache data when the player's pet changes, and adds a pure-Lua regression harness for the production math. The manifest now reads **1.0.3** as the approved release candidate, while **1.0.2 remains the latest GitHub release** until the release tag is created. Packaging was tightened at the same time so players receive only the runtime TOC/Lua plus the required MIT license; project documentation, tests and the changelog stay in Git rather than the installed addon folder.
+A small launch-polish pass followed the documentation review. The resistance model stayed unchanged; the code instead hardened secret target-name handling, clears stale pet cache data when the player's pet changes, and adds a pure-Lua regression harness for the production math. The manifest now reads **1.0.3**. Packaging was tightened at the same time so players receive only the runtime TOC/Lua plus the required MIT license; project documentation, tests and the changelog stay in Git rather than the installed addon folder.
 
 Running the new harness with `texlua tests/math.lua` passed **31 assertions**, and `loadfile` syntax checks passed for both the runtime Lua and test file. Those checks verify the implementation and math in a Lua environment; the character/pet tooltip behavior still needs the actual Forever client.
+
+The approved release was then tagged as **v1.0.3** on commit `8c2856e8600432ae44622c5c70d9e89405ffd466`. CurseForge subsequently showed the file as **Approved**, release type **Release**, for **Forever 1.60.1**. That confirms publication, but not the internal file listing of the generated archive; the package contents remain source-configured until the published ZIP itself is inspected. A separate GitHub Release object for v1.0.3 had not been created when this record was written.
 
 ## A next chapter grounded in the game
 

@@ -1,6 +1,6 @@
 # Resist Forever
 
-**Creative:** Babuni · **Release candidate:** 1.0.3 · **Latest GitHub release:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
+**Creative:** Babuni · **Current CurseForge release:** 1.0.3 · **Latest Git tag:** v1.0.3 · **Latest GitHub Release object:** v1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
 
 **Resist Forever** explains how a character's or pet's magical resistance might affect **direct spell damage**. Hover **Fire, Nature, Frost, Shadow or Arcane resistance** in the character/pet panel to see the chance of each **10% damage-resisted outcome**, together with **base spell miss** against an attacker of a given level.
 
@@ -31,7 +31,9 @@ Only the TOC and Lua are loaded by WoW; the MIT `LICENSE` accompanies the distri
 
 Enable **Resist Forever** in the game's addon list and open your character sheet. Hover a resistance row, or open the **pet character panel** and hover its corresponding resistance row. No slash commands or settings screen are defined by the current source; the addon does not write SavedVariables.
 
-The [v1.0.2 GitHub release](https://github.com/babunidev/ResistForever/releases/tag/v1.0.2) was published **October 20, 2026** without an attached GitHub ZIP asset. CurseForge is separately installable for WoW Forever 1.60.1; public cache results confirm the project is active, but this repository does not treat a cached CurseForge page as proof of an exact current file version. This build targets the Forever UI conventions used by `CharacterStatFrameScrollBoxIconElementMixin`, `PaperDollStatTooltip` and interface 16001—not ordinary Vanilla 1.12 or modern retail WoW.
+**Release status, November 4, 2026:** annotated tag **v1.0.3** points to release commit `8c2856e8600432ae44622c5c70d9e89405ffd466`. CurseForge shows **v1.0.3** as an **Approved Release** for **WoW Forever 1.60.1**. A separate GitHub Release object for v1.0.3 has not been created; the latest GitHub Release object remains v1.0.2. The published CurseForge file itself has not yet been opened and inspected byte-for-byte, so the intended three-file package is documented from `.pkgmeta`, not claimed as a verified archive listing.
+
+This build targets the Forever UI conventions used by `CharacterStatFrameScrollBoxIconElementMixin`, `PaperDollStatTooltip` and interface 16001—not ordinary Vanilla 1.12 or modern retail WoW.
 
 ## How to read the tooltip
 
@@ -48,7 +50,7 @@ A simple *model illustration*, **not an observed client combat test**: 90 resist
 
 ## Current Forever model used by 1.0.3
 
-The 1.0.3 development build keeps the resistance formulas adopted in **v1.0.2**; the launch-polish changes do not alter the mathematical model:
+The released 1.0.3 build keeps the resistance formulas adopted in **v1.0.2**; the launch-polish changes do not alter the mathematical model:
 
 | Quantity | Current behavior |
 | --- | --- |
@@ -79,7 +81,7 @@ Changes in target, auras, pet state, equipment, resistance or level trigger atte
 
 **September 28 — 1.0.0:** First implementation, initially using Classic-style resist outcome buckets. **October 12 — 1.0.1:** Pet support and an updated Classic PvP/PvE split for level-based misses. **October 20 — 1.0.2:** Replaced those estimates with the then-current Forever beta **10%-step resist and base spell miss** models. Those are genuine modeling revisions, not three simultaneous calculation modes.
 
-The runtime remains one Lua file plus the TOC, with a [.pkgmeta](.pkgmeta) pointer to the manual changelog. The 1.0.3 development tree adds `tests/math.lua`, a pure-Lua regression harness for the production resistance and base-miss functions. Source/API compatibility and automated math checks are separate from live game verification; no launch-client combat-log validation is claimed. The [MIT license](LICENSE) is preserved.
+The runtime remains one Lua file plus the TOC, with a [.pkgmeta](.pkgmeta) pointer to the manual changelog. The repository also contains `tests/math.lua`, a pure-Lua regression harness for the production resistance and base-miss functions; it is excluded from player packages. Source/API compatibility, automated math checks and confirmed CurseForge publication are separate from live game verification; no launch-client combat-log validation is claimed. The [MIT license](LICENSE) is preserved.
 
 ## Portfolio and development documentation
 

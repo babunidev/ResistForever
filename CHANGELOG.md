@@ -5,6 +5,8 @@
 
 ## 1.0.3 — November 4, 2026: launch compatibility polish
 
+**Release record:** annotated Git tag `v1.0.3` points to `8c2856e8600432ae44622c5c70d9e89405ffd466`. CurseForge subsequently showed **v1.0.3** as **Approved**, **Release**, targeting **Forever 1.60.1**. No separate GitHub Release object for v1.0.3 was present when this record was updated. The CurseForge archive contents were not independently opened after publication, so package contents remain verified from source packaging configuration rather than from the published ZIP.
+
 - Rechecked the public WoW Forever UI source snapshot for **1.60.1.70790 / Interface 16001**; the paper-doll hooks, player/pet stat panes, resistance-row `numericValue` and four-value `UnitResistance` API used by the addon remain present.
 - Rechecked current `wowsims/forever` research; the 1.0.2 direct-spell resistance and zero-floor base-miss model remains unchanged in 1.0.3.
 - Hardened secret target-name handling by checking accessibility before any string comparison and guarding the non-empty check.
@@ -13,7 +15,7 @@
 - Finalized `.pkgmeta` for a minimal `ResistForever` package: only the runtime TOC/Lua and MIT `LICENSE` ship to players; repository documentation, tests and `CHANGELOG.md` are excluded. `CHANGELOG.md` remains the manual release-note source.
 - Bumped the addon manifest to **1.0.3** for the launch-polish development build.
 - Polished documentation terminology and launch-readiness records under the repository's current `AGENTS.md` / documentation standard.
-- No public tag, GitHub Release or CurseForge publication is implied by this development entry; live launch-client testing remains separate.
+- Release publication completed through the approved `v1.0.3` tag and confirmed CurseForge approval. Live launch-client testing remains a separate verification step.
 
 ## October 27, 2026 — portfolio documentation expansion
 

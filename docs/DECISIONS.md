@@ -11,6 +11,7 @@
 | Oct 20 `8a9f0961` / 1.0.2 | Replace earlier math with **Forever beta 10% outcomes**, `R/(R+9L)`, and a flat-17%-from-+3 level miss rule without unavoidable floor |
 | Oct 26 `eeb7d693`, `653b525d`, `6c40390c` | Standardize Babuni.dev author and MIT license copyright |
 | Oct 26 `61460f5d`, `cf910d4a` | Commit/link first source-grounded documentation |
+| Nov 4 `v1.0.3` / `8c2856e` | Ship launch compatibility/safety polish through an annotated tag; CurseForge publication confirmed Approved/Release for Forever 1.60.1 |
 
 The first two formula models are **historical, not selectable alternatives** in the current program. The commit record identifies real iterations, but not every human conversation, experiment, or earlier author of a given Lua line.
 

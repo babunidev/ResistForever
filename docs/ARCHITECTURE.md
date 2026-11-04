@@ -1,6 +1,6 @@
 # ResistForever — technical architecture and probability semantics
 
-**Inspected:** `ResistForever.lua`, `ResistForever.toc`, `.pkgmeta`, Git versions 1.0.0–1.0.2; documentation audit October 27, 2026, with a launch-source compatibility recheck on November 4, 2026. **Source review only; no in-game launch test.**
+**Inspected:** `ResistForever.lua`, `ResistForever.toc`, `.pkgmeta`, Git versions 1.0.0–1.0.3; documentation audit October 27, 2026, launch-source compatibility recheck and 1.0.3 release record update on November 4, 2026. **Source/release review only; no in-game launch test.**
 
 ## Installed module and lifecycle
 
@@ -89,6 +89,6 @@ Every relevant event retries hook installation, refreshes readable player/pet ca
 
 ## Packaging and test status
 
-Only `ResistForever.lua` and `ResistForever.toc` are required at runtime. `tests/math.lua` is development-only and loads the production Lua through a test-only early return before any WoW API initialization. `.pkgmeta` fixes the package folder name as `ResistForever` and excludes repository-only documentation, tests, and `CHANGELOG.md`; the player ZIP therefore contains `ResistForever.lua`, `ResistForever.toc`, and the MIT `LICENSE`. `CHANGELOG.md` is still read as manual release-note metadata. GitHub releases **v1.0.1/v1.0.2** exist without attached ZIP artifacts.
+Only `ResistForever.lua` and `ResistForever.toc` are required at runtime. `tests/math.lua` is development-only and loads the production Lua through a test-only early return before any WoW API initialization. `.pkgmeta` fixes the package folder name as `ResistForever` and excludes repository-only documentation, tests, and `CHANGELOG.md`; the intended player ZIP therefore contains `ResistForever.lua`, `ResistForever.toc`, and the MIT `LICENSE`. `CHANGELOG.md` is still read as manual release-note metadata. Annotated Git tag **v1.0.3** points to `8c2856e8600432ae44622c5c70d9e89405ffd466`, and CurseForge v1.0.3 is confirmed Approved/Release for Forever 1.60.1. The generated CurseForge archive has not yet been independently opened to verify its file listing.
 
 **Automated verification, November 4, 2026:** `texlua tests/math.lua` passed **31 assertions** covering the level-19/14-resistance regression case, 10%/90% edge distributions, probability sums/weighted means, representative higher resistance and the zero-floor base-miss curve. `loadfile` syntax checks under `texlua` also passed for `ResistForever.lua` and `tests/math.lua`. This is a development-environment check, **not** an in-game Forever test or combat-log calibration.
