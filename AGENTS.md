@@ -1,6 +1,6 @@
 # ResistForever — developer and AI collaborator instructions
 
-**Human creative / final decision-maker:** Babuni. **Target:** World of Warcraft: Forever **1.60.1**, addon interface **16001**, manifest **1.0.2**. **License:** [MIT](LICENSE).
+**Human creative / final decision-maker:** Babuni. **Target:** World of Warcraft: Forever **1.60.1**, addon interface **16001**, manifest **1.0.3**. **License:** [MIT](LICENSE).
 
 ## Preserve the original idea
 
@@ -17,9 +17,9 @@ Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` f
 - The defender is **player or pet** from the hovered frame. The **current target is only a candidate attacker-level context**; don't substitute target resistance into the calculation.
 - Skip invalid/secret/inaccessible values. Use `issecretvalue`/`canaccessvalue` checks and protected arithmetic carefully; clients can prohibit calculations on secret unit values.
 - Source preference: tooltip row **numericValue**, then `UnitResistance` effective/real, then last-known cache. Mark **stale** values; do not claim fresh data if cached.
-- The source caches `player` and `pet` by unit tokens; evaluate pet replacement cache invalidation before relying on it.
+- The source caches `player` and `pet` by unit tokens. Preserve the `UNIT_PET` invalidation that clears the previous pet's cached level/resistances before repopulating them.
 - Use `hooksecurefunc` after Blizzard's stat-row init and tooltip routines; guard against duplicated append/recursive refresh and preserve native text.
-- The source is a **single Lua + TOC** addon, no SavedVariables, no dependencies, no slash commands, no committed tests. Do not invent a feature or an automated pass.
+- The runtime remains a **single Lua + TOC** addon with no SavedVariables, dependencies or slash commands. `tests/math.lua` is a development-only pure-Lua regression harness and must not be added to the runtime TOC.
 
 ## Development process
 

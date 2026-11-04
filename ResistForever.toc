@@ -2,6 +2,6 @@
 ## Title: Resist Forever
 ## Notes: Adds 10%-step partial-resist chances and base spell miss to character and pet resistance tooltips.
 ## Author: Babuni.dev
-## Version: 1.0.2
+## Version: 1.0.3
 
 ResistForever.lua

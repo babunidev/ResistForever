@@ -5,7 +5,7 @@
 ## Installed module and lifecycle
 
 ```text
-ResistForever.toc / Interface 16001 / Version 1.0.2
+ResistForever.toc / Interface 16001 / Version 1.0.3
   -> ResistForever.lua
        | five resistance-school atlas identifiers
        | pure direct-spell average/bucket and base-miss functions
@@ -45,7 +45,7 @@ Forever may return numbers or strings with secret/protected access restrictions.
 
 The paper-doll UI may internally show a different `realResistance` value to `ExpectedSpellResistance`; using the readable row's value avoids assuming the historical UI helper equals the newer server-side formula. `ResolveUnitLevel` similarly asks `UnitLevel(unit)` then checks last-known level.
 
-The cache structure is `cache.level[player/pet]` and `cache.resistance[player/pet][schoolID]`. `RefreshResistanceCache` updates it during subscribed events. If resistance or level is reused from cache, the rendered tooltip appends **“Using last available resistance value”**. The cache does not persist across sessions. **Potential ambiguity:** pet unit tokens can refer to different pets over time; there is no explicit identity-aware purge if a newly summoned pet's values are still inaccessible.
+The cache structure is `cache.level[player/pet]` and `cache.resistance[player/pet][schoolID]`. `RefreshResistanceCache` updates it during subscribed events. If resistance or level is reused from cache, the rendered tooltip appends **“Using last available resistance value”**. The cache does not persist across sessions. In 1.0.3, the player's `UNIT_PET` event clears the cached pet level and resistance table before repopulation, preventing a replacement pet from inheriting stale values from the previous pet.
 
 ## Pure mathematical model
 
@@ -89,4 +89,4 @@ Every relevant event retries hook installation, refreshes readable player/pet ca
 
 ## Packaging and test status
 
-Only `ResistForever.lua` and `ResistForever.toc` are required at runtime. GitHub releases **v1.0.1/v1.0.2** exist without attached ZIP artifacts. [LICENSE](../LICENSE) grants MIT terms and `.pkgmeta` names the manual changelog. No **tests/** path exists in the current tree. Static inspection confirms design, **not** mathematical calibration against combat logs or successful UI behavior in-game.
+Only `ResistForever.lua` and `ResistForever.toc` are required at runtime. `tests/math.lua` is development-only and loads the production Lua through a test-only early return before any WoW API initialization. GitHub releases **v1.0.1/v1.0.2** exist without attached ZIP artifacts. [LICENSE](../LICENSE) grants MIT terms and `.pkgmeta` names the manual changelog. Automated math checks do **not** substitute for combat-log calibration or successful UI behavior in-game.

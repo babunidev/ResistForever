@@ -1,6 +1,6 @@
 # Resist Forever
 
-**Creative:** Babuni · **Current version:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
+**Creative:** Babuni · **Current development version:** 1.0.3 · **Latest public version:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
 
 **Resist Forever** explains how a character's or pet's magical resistance might affect **direct spell damage**. Hover **Fire, Nature, Frost, Shadow or Arcane resistance** in the character/pet panel to see the chance of each **10% damage-resisted outcome**, together with **base spell miss** against an attacker of a given level.
 
@@ -41,9 +41,9 @@ The final **Base spell miss** row is a level-difference estimate **before any en
 
 A simple *model illustration*, **not an observed client combat test**: 90 resistance against a level-10 attacker has an average resisted fraction of `90 / (90 + 9 × 10) = 0.5`. Under the middle-range triangular distribution, its visible nonzero outcomes are **40% damage resisted: 25% chance; 50%: 50%; 60%: 25%**. At equal attacker/defender level, modeled base spell miss is **4%**. Actual gameplay differs with spell-specific mechanics and unobserved enemy stats.
 
-## Current Forever model used by 1.0.2
+## Current Forever model used by 1.0.3
 
-The source intentionally uses the October 20 **v1.0.2** formulas, not the earlier Classic model:
+The 1.0.3 development build keeps the resistance formulas adopted in **v1.0.2**; the launch-polish changes do not alter the mathematical model:
 
 | Quantity | Current behavior |
 | --- | --- |
@@ -66,7 +66,7 @@ These formulas reflect the **Forever research model adopted in v1.0.2 and rechec
 
 The source recognizes resistance rows by their **Fire/Nature/Frost/Shadow/Arcane atlases** and classifies them under the **player** or **pet** statistics scroll box. For resistance it prefers the frame's already-readable `numericValue`; otherwise it reads `UnitResistance` (effective value first, then real). It separately obtains the defender's level.
 
-Forever's UI can present **secret/protected values**. The addon checks value accessibility before calculating and maintains a small session-only cache of previously readable player/pet levels and resistance. If a valid last-known value is used, the tooltip marks it with **“Using last available resistance value”**. No persistent data or private combat logs are stored.
+Forever's UI can present **secret/protected values**. The addon checks value accessibility before calculating and maintains a small session-only cache of previously readable player/pet levels and resistance. Target names are rejected as secret before any string comparison. When the player's pet changes, the old pet cache is cleared before new values are read. If a valid last-known value is used, the tooltip marks it with **“Using last available resistance value”**. No persistent data or private combat logs are stored.
 
 Changes in target, auras, pet state, equipment, resistance or level trigger attempts to refresh the cache/open tooltip. Hooks are installed through `hooksecurefunc` rather than wholesale replacement of Blizzard's original tooltip routine. There may be updates delayed by the client or missing when data is inaccessible; stale results are identified instead of silently treated as fresh.
 
@@ -74,7 +74,7 @@ Changes in target, auras, pet state, equipment, resistance or level trigger atte
 
 **September 28 — 1.0.0:** First implementation, initially using Classic-style resist outcome buckets. **October 12 — 1.0.1:** Pet support and an updated Classic PvP/PvE split for level-based misses. **October 20 — 1.0.2:** Replaced those estimates with the then-current Forever beta **10%-step resist and base spell miss** models. Those are genuine modeling revisions, not three simultaneous calculation modes.
 
-The repo contains only one runtime Lua file and a TOC, with a [.pkgmeta](.pkgmeta) pointer to the manual changelog. **No automated test script** is present as of the November 4 launch review. The launch review verified public source/API compatibility only; no game-client test or combat-log statistical validation was performed. The [MIT license](LICENSE) is preserved.
+The runtime remains one Lua file plus the TOC, with a [.pkgmeta](.pkgmeta) pointer to the manual changelog. The 1.0.3 development tree adds `tests/math.lua`, a pure-Lua regression harness for the production resistance and base-miss functions. Source/API compatibility and automated math checks are separate from live game verification; no launch-client combat-log validation is claimed. The [MIT license](LICENSE) is preserved.
 
 ## Portfolio and development documentation
 

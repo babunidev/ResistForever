@@ -1,6 +1,6 @@
 # ResistForever — verification roadmap and open decisions
 
-**Creative / decision authority:** Babuni. **Current version:** 1.0.2, interface 16001. This is a prioritized verification proposal, **not approval of new runtime features**.
+**Creative / decision authority:** Babuni. **Current development version:** 1.0.3, interface 16001. **Latest public version:** 1.0.2. This is a prioritized verification proposal, **not approval of new runtime features**.
 
 ## Implemented in current source
 
@@ -15,7 +15,7 @@
 
 ## P0 — math and model validation
 
-1. Run pure formula fixtures around `R=0`, unknown/negative resistance, small/high R, player/pet levels and attacker levels 1 through max relevant range. The current repo has **no automated test files**.
+1. Maintain the new `tests/math.lua` fixtures around zero/invalid resistance, representative low/high resistance, edge distributions and level-based misses. These are pure-Lua automated checks, not in-game tests.
 2. Check that every 0–100% bucket remains within 0–1, distribution sums near 1 including **hidden 0%** and the weighted mean equals `R/(R+9L)` to reasonable numerical tolerance.
 3. Test edge transitions exactly **a=0.10**, just above 0.10, **a=0.90** and just below 0.90, including potential discontinuities and tooltip rounding.
 4. Verify miss with level differences **-5, -4, -3, -2, 0, 1, 2, 3, 4, 10** and distinguish **calculated 1%** from an *unavoidable miss floor*. In source, 0% is possible.
@@ -30,13 +30,13 @@
 10. Compare a same-level target, a higher/lower-level target, a self-target and a skull/unknown-level target. Check contextual attacker level and name presentation.
 11. Verify `UnitResistance` effective/real fallback and row `numericValue` priority under changing gear, pets, buffs and debuffs.
 12. Trigger inaccessible/secret numeric values; verify the addon never raises a forbidden arithmetic error and clearly notes when a last-known value is used.
-13. Test unit replacement, despawn/re-summon and leveling: the cache is keyed to **player/pet** not unique pet identity and may retain a previous pet's data if new values are unavailable. Decide whether that needs invalidation.
+13. Verify in game that the 1.0.3 `UNIT_PET` cache invalidation prevents a replacement pet from inheriting the previous pet's cached level/resistance while still repopulating readable values normally.
 14. Check display of extremely small probabilities, percentage rounding and many populated 10%-step rows at small tooltip sizes/UI scales.
 15. Record localization behavior: the title, context labels, `% damage resisted` and `Base spell miss` are **English literals**, even if native tooltips are localized.
 
 ## P2 — release quality and maintainability
 
-16. Add bounded pure-Lua test fixtures for formula/rounding and mocked tooltip/context handling if justified; tests must be run and recorded, not merely committed.
+16. Keep the bounded pure-Lua production-math regression harness passing. Tooltip/context behavior still requires client-side verification because the current harness intentionally avoids mocking Blizzard frames.
 17. Confirm release packaging/update workflow. GitHub v1.0.2 exists **without a release asset**, while `.pkgmeta` contains manual-changelog metadata; no CurseForge upload/state was independently verified here.
 18. Keep checking exact 1.60.1 builds, secret-value API changes and future Forever resistance revisions before promising compatibility beyond what has been verified. Public source compatibility was rechecked at **1.60.1.70790**; live launch-client behavior still needs confirmation.
 19. Preserve the repository's existing [MIT license](LICENSE), its Babuni.dev copyright notice and accurate source attribution.

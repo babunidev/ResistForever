@@ -26,7 +26,7 @@ The first two formula models are **historical, not selectable alternatives** in 
 
 **Same-level plus target context vs arbitrary input.** Only a selected target with a known different level produces a second comparison. A skull target is omitted rather than guessed at an unsupported level.
 
-**Secret values vs freshness.** Cached last-known data can help show something when values are protected, but may be stale, particularly after pet replacement. The source displays a note and should consider identity-based invalidation if future tests find misleading cases.
+**Secret values vs freshness.** Cached last-known data can help show something when values are protected, but may be stale. The source displays a note; 1.0.3 additionally clears the pet cache on the player's `UNIT_PET` event so a replacement pet cannot inherit the previous pet's cached values.
 
 **Secure hooks and event refresh vs frame replacement.** Post-hooks respect Blizzard's UI while relying on exact 1.60.1 mixin/frame names. Updates are event-driven; no polling loop exists. There can be version-specific breakage without breaking the rest of the addon.
 
@@ -34,6 +34,6 @@ The first two formula models are **historical, not selectable alternatives** in 
 
 ## Creative decisions still open
 
-Would showing the 0% branch or average reduction make the math clearer? Should a target with unknown level be omitted (current) or assigned user-chosen level (proposal)? Should a pet cache clear on identity changes? Should future clients have locale text tables? Should formula changes be gated by verified version checks?
+Would showing the 0% branch or average reduction make the math clearer? Should a target with unknown level be omitted (current) or assigned user-chosen level (proposal)? Should future clients have locale text tables? Should formula changes be gated by verified version checks?
 
 These are **questions and AI-suggested tests**, not decisions already made by Babuni. Any eventual choice should be recorded with reasoning, alternatives, code and actual verification.

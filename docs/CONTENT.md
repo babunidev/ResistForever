@@ -1,6 +1,6 @@
 # ResistForever — content inventory, formulas and player data
 
-**Creative:** Babuni · **Current release:** 1.0.2.
+**Creative:** Babuni · **Current development:** 1.0.3 · **Latest public release:** 1.0.2.
 
 ## The five resistance subjects
 
@@ -44,9 +44,9 @@ The program uses an in-memory `cache.level` table and school-indexed player/pet 
 ## Source and licensing inventory
 
 - [`ResistForever.lua`](../ResistForever.lua): entire runtime/UI and current formula.
-- [`ResistForever.toc`](../ResistForever.toc): interface 16001, version 1.0.2 and author credit.
+- [`ResistForever.toc`](../ResistForever.toc): interface 16001, development version 1.0.3 and author credit.
 - [`CHANGELOG.md`](../CHANGELOG.md): original version sequence plus audit chronology.
 - [`.pkgmeta`](../.pkgmeta): manual-changelog metadata.
 - [`LICENSE`](../LICENSE): existing **MIT License**, copyright Babuni.dev.
 
-No image/font/sound files or automated tests are included in the inspected repository tree. The source uses Blizzard's existing stat atlases and tooltip fonts rather than bundled original media. GitHub v1.0.1 and v1.0.2 release entries have **no attached ZIP assets**.
+`tests/math.lua` is the only development test file; no image, font or sound assets are bundled. The source uses Blizzard's existing stat atlases and tooltip fonts rather than bundled original media. GitHub v1.0.1 and v1.0.2 release entries have **no attached ZIP assets**.

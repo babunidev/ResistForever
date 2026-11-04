@@ -1,13 +1,13 @@
 -- Resist Forever
--- Partial-resist chances on the character panel resistance tooltips.
+-- Partial-resist chances on the character and pet panel resistance tooltips.
 -- Built for World of Warcraft: Forever 1.60.1 (Interface 16001).
 
 local PROBABILITY_EPSILON = 0.0005
--- Direct-spell partial resists land in 10% damage steps (Forever beta / wowsims).
+-- Direct-spell partial resists land in 10% damage steps (Forever research model / wowsims).
 -- The 0% outcome is kept internally and never shown.
 local PARTIAL_REDUCTIONS = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 }
 
--- Enum.Damageclass on build 1.60.1.70009. FirstResist is 2, LastResist is 6.
+-- Enum.Damageclass rechecked against public Forever UI source 1.60.1.70790. FirstResist is 2, LastResist is 6.
 local SCHOOLS = {
     { name = "Fire", fallback = 2, atlas = "UI-Character-Info-Resistance-Fire" },
     { name = "Nature", fallback = 3, atlas = "UI-Character-Info-Resistance-Nature" },
@@ -79,10 +79,13 @@ local function UsableNumber(value)
 end
 
 local function UsableString(value)
-    if type(value) ~= "string" or value == "" or IsSecret(value) then
+    if type(value) ~= "string" or IsSecret(value) then
         return false
     end
-    return true
+    local ok, nonEmpty = pcall(function()
+        return value ~= ""
+    end)
+    return ok and nonEmpty
 end
 
 local function WholeLevel(value)
@@ -187,6 +190,17 @@ local function BuildResistanceContext(resistance, defenderLevel, attackerLevel)
         context.buckets = ComputePartialResistBuckets(resistance, attackerLevel)
     end
     return context
+end
+
+-- Test-only entry point. Normal addon loading never sets this flag, so the
+-- runtime continues into the WoW API section below. The regression harness can
+-- load this exact file and exercise the production math without mocking frames.
+if rawget(_G, "RESISTFOREVER_TESTING") == true then
+    return {
+        ComputeAverageResistance = ComputeAverageResistance,
+        ComputePartialResistBuckets = ComputePartialResistBuckets,
+        ComputeSpellMiss = ComputeSpellMiss,
+    }
 end
 
 --------------------------------------------------
@@ -299,6 +313,11 @@ local function GetTargetContext()
         end
     end
     return { name = name, level = level }
+end
+
+local function ClearPetCache()
+    cache.level.pet = nil
+    cache.resistance.pet = {}
 end
 
 local function RefreshResistanceCache()
@@ -571,6 +590,9 @@ eventFrame:SetScript("OnEvent", function(_, event, unit)
     if (event == "UNIT_AURA" or event == "UNIT_RESISTANCES" or event == "UNIT_LEVEL")
         and unit and unit ~= "player" and unit ~= "pet" then
         return
+    end
+    if event == "UNIT_PET" and (not unit or unit == "player") then
+        ClearPetCache()
     end
     InstallHooks()
     RefreshResistanceCache()

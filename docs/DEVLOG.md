@@ -76,6 +76,10 @@ Current public `wowsims/forever` research also continues to use the same 10%-ste
 
 No in-game launch-client test, combat-log validation, version bump, tag or public release was performed as part of this review.
 
+### 1.0.3 development polish
+
+A small launch-polish pass followed the documentation review. The resistance model stayed unchanged; the code instead hardened secret target-name handling, clears stale pet cache data when the player's pet changes, and adds a pure-Lua regression harness for the production math. The manifest now reads **1.0.3** as a development version, while **1.0.2 remains the latest public release** until an explicit release is approved.
+
 ## A next chapter grounded in the game
 
 The most valuable continuation is empirical: use the actual Forever build and a controlled set of direct magical hits to compare the distribution of observed partial reductions with the displayed 10% buckets, while separately estimating misses and recording any spell-hit/penetration effects. Repeat with a pet and an enemy whose level differs from the defender's.

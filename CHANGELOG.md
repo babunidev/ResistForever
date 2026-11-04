@@ -3,14 +3,16 @@
 **Creative:** Babuni · **Copyright notice:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
 **Method:** Preserves original version facts and adds dated Git context; release or source existence is not proof of independently tested game behavior.
 
-## Unreleased — November 4, 2026: launch documentation polish
+## Unreleased — 1.0.3 launch compatibility polish
 
-- Rechecked the public WoW Forever UI source snapshot for **1.60.1.70790 / Interface 16001** before launch.
-- Confirmed the current source still exposes the addon's required paper-doll hooks and resistance-row data: `PaperDollStatTooltip`, `CharacterStatFrameScrollBoxIconElementMixin:Init`, player/pet stat panes and row `numericValue`.
-- Confirmed current generated API documentation still defines `UnitResistance(unit, damageClass)` with base, real, effective and bonus resistance returns plus secret-value restrictions.
-- Rechecked current `wowsims/forever` research: its direct-spell resistance and level-based base-miss model still matches the calculations used by 1.0.2.
-- Polished current documentation terminology so **Babuni** identifies the human creative while historical/legal **Babuni.dev** notices remain intact where they are part of the repository record.
-- Documentation only: **no Lua, TOC version or public release changed**, and no in-game launch-client or combat-log test was claimed.
+- Rechecked the public WoW Forever UI source snapshot for **1.60.1.70790 / Interface 16001**; the paper-doll hooks, player/pet stat panes, resistance-row `numericValue` and four-value `UnitResistance` API used by the addon remain present.
+- Rechecked current `wowsims/forever` research; the 1.0.2 direct-spell resistance and zero-floor base-miss model remains unchanged in 1.0.3.
+- Hardened secret target-name handling by checking accessibility before any string comparison and guarding the non-empty check.
+- Clear cached pet level/resistance data on the player's `UNIT_PET` event before reading the replacement pet.
+- Added `tests/math.lua`, a development-only pure-Lua regression harness that exercises the production average-resistance, 10%-bucket and base-miss functions.
+- Bumped the addon manifest to **1.0.3** for the launch-polish development build.
+- Polished documentation terminology and launch-readiness records under the repository's current `AGENTS.md` / documentation standard.
+- No public tag, GitHub Release or CurseForge publication is implied by this development entry; live launch-client testing remains separate.
 
 ## October 27, 2026 — portfolio documentation expansion
 
