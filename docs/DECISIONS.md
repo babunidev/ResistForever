@@ -30,7 +30,9 @@ The first two formula models are **historical, not selectable alternatives** in 
 
 **Secure hooks and event refresh vs frame replacement.** Post-hooks respect Blizzard's UI while relying on exact 1.60.1 mixin/frame names. Updates are event-driven; no polling loop exists. There can be version-specific breakage without breaking the rest of the addon.
 
-**MIT licensing:** The repository includes an actual [MIT LICENSE](../LICENSE), with Babuni.dev copyright. Do not claim unlicensed source or rewrite licensing terms during feature work.
+**Minimal release package:** Repository documentation and test material support development and the portfolio, not the game client. The release package is therefore fixed to `ResistForever.lua`, `ResistForever.toc`, and the MIT `LICENSE`. `CHANGELOG.md` is retained in Git as the manual release-note source but excluded from the player ZIP. The package folder is explicitly named `ResistForever`.
+
+**MIT licensing:** The repository includes an actual [MIT LICENSE](../LICENSE), with Babuni.dev copyright. The license file remains in distributed packages because the MIT notice must accompany copies/substantial portions. Do not claim unlicensed source or rewrite licensing terms during feature work.
 
 ## Creative decisions still open
 

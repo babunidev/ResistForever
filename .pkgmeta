@@ -1,9 +1,13 @@
+package-as: ResistForever
+enable-nolib-creation: no
+
 manual-changelog:
   filename: CHANGELOG.md
   markup-type: markdown
 
 ignore:
   - AGENTS.md
+  - CHANGELOG.md
   - CONCEPT.md
   - README.md
   - ROADMAP.md

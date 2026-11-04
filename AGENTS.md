@@ -20,6 +20,7 @@ Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` f
 - The source caches `player` and `pet` by unit tokens. Preserve the `UNIT_PET` invalidation that clears the previous pet's cached level/resistances before repopulating them.
 - Use `hooksecurefunc` after Blizzard's stat-row init and tooltip routines; guard against duplicated append/recursive refresh and preserve native text.
 - The runtime remains a **single Lua + TOC** addon with no SavedVariables, dependencies or slash commands. `tests/math.lua` is a development-only pure-Lua regression harness and must not be added to the runtime TOC.
+- Release packages must stay minimal: players receive **`ResistForever.lua`**, **`ResistForever.toc`**, and the required **MIT `LICENSE`** only. Keep `AGENTS.md`, README/concept/roadmap, `CHANGELOG.md`, `docs/`, and `tests/` in the repository but excluded through `.pkgmeta`. `CHANGELOG.md` remains the manual release-note source even though it is not shipped in the addon ZIP. Preserve `package-as: ResistForever`.
 
 ## Development process
 

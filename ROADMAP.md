@@ -1,6 +1,6 @@
 # ResistForever — verification roadmap and open decisions
 
-**Creative / decision authority:** Babuni. **Current development version:** 1.0.3, interface 16001. **Latest public version:** 1.0.2. This is a prioritized verification proposal, **not approval of new runtime features**.
+**Creative / decision authority:** Babuni. **Current development version:** 1.0.3, interface 16001. **Latest GitHub release:** 1.0.2. This is a prioritized verification proposal, **not approval of new runtime features**.
 
 ## Implemented in current source
 
@@ -11,7 +11,7 @@
 - Base spell miss: defender ≥3 levels above attacker **17%**, otherwise `max(0, 4% + 1% × levelDifference)`, with **zero floor** rather than unavoidable 1%.
 - Source accessibility/secret checks; session-only cached player/pet levels and resistance with visible stale-value caveat.
 - Event/cache updates and secure post-hooks into Blizzard's paper-doll tooltip and stat-row initializer.
-- GitHub published v1.0.2/v1.0.1 **tags/releases with no uploaded assets**; source must be installed from repository.
+- GitHub published v1.0.2/v1.0.1 **tags/releases with no uploaded assets**. CurseForge is publicly installable for Forever 1.60.1; its exact current file version must be verified directly after the next release rather than inferred from cached public pages.
 
 ## P0 — math and model validation
 
@@ -37,7 +37,7 @@
 ## P2 — release quality and maintainability
 
 16. Keep the bounded pure-Lua production-math regression harness passing. Tooltip/context behavior still requires client-side verification because the current harness intentionally avoids mocking Blizzard frames.
-17. Confirm release packaging/update workflow. GitHub v1.0.2 exists **without a release asset**, while `.pkgmeta` contains manual-changelog metadata; no CurseForge upload/state was independently verified here.
+17. Packaging is configured for a minimal `ResistForever` folder containing only `ResistForever.toc`, `ResistForever.lua`, and `LICENSE`; `CHANGELOG.md` remains the manual release-note source but is ignored from the ZIP. Before pushing a release tag, verify the private CurseForge repository/tag integration settings if accessible; after tagging, inspect the actual generated CurseForge archive and publication state.
 18. Keep checking exact 1.60.1 builds, secret-value API changes and future Forever resistance revisions before promising compatibility beyond what has been verified. Public source compatibility was rechecked at **1.60.1.70790**; live launch-client behavior still needs confirmation.
 19. Preserve the repository's existing [MIT license](LICENSE), its Babuni.dev copyright notice and accurate source attribution.
 

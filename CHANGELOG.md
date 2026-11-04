@@ -10,7 +10,7 @@
 - Hardened secret target-name handling by checking accessibility before any string comparison and guarding the non-empty check.
 - Clear cached pet level/resistance data on the player's `UNIT_PET` event before reading the replacement pet.
 - Added `tests/math.lua`, a development-only pure-Lua regression harness that exercises the production average-resistance, 10%-bucket and base-miss functions.
-- Updated `.pkgmeta` so development documentation and `tests/` are excluded from packaged addon ZIPs while the runtime, license and changelog remain.
+- Finalized `.pkgmeta` for a minimal `ResistForever` package: only the runtime TOC/Lua and MIT `LICENSE` ship to players; repository documentation, tests and `CHANGELOG.md` are excluded. `CHANGELOG.md` remains the manual release-note source.
 - Bumped the addon manifest to **1.0.3** for the launch-polish development build.
 - Polished documentation terminology and launch-readiness records under the repository's current `AGENTS.md` / documentation standard.
 - No public tag, GitHub Release or CurseForge publication is implied by this development entry; live launch-client testing remains separate.

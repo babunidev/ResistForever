@@ -1,6 +1,6 @@
 # Resist Forever
 
-**Creative:** Babuni · **Current development version:** 1.0.3 · **Latest public version:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
+**Creative:** Babuni · **Current development version:** 1.0.3 · **Latest GitHub release:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
 
 **Resist Forever** explains how a character's or pet's magical resistance might affect **direct spell damage**. Hover **Fire, Nature, Frost, Shadow or Arcane resistance** in the character/pet panel to see the chance of each **10% damage-resisted outcome**, together with **base spell miss** against an attacker of a given level.
 
@@ -14,19 +14,24 @@ The current [wowsims/forever](https://github.com/wowsims/forever) model still us
 
 ## Install
 
-Place the files in a folder named `ResistForever` under your client's `Interface/AddOns` directory:
+The normal player install is through the [ResistForever CurseForge project](https://www.curseforge.com/wow/addons/resistforever). For a manual install, place a folder named `ResistForever` under `Interface/AddOns`.
+
+The packaged addon is intentionally minimal:
 
 ```text
 Interface/
 └── AddOns/
     └── ResistForever/
         ├── ResistForever.toc
-        └── ResistForever.lua
+        ├── ResistForever.lua
+        └── LICENSE
 ```
+
+Only the TOC and Lua are loaded by WoW; the MIT `LICENSE` accompanies the distributed source as required by the license. Repository-only files such as `AGENTS.md`, README/concept/roadmap, `CHANGELOG.md`, `docs/`, and `tests/` are excluded from release ZIPs by `.pkgmeta`.
 
 Enable **Resist Forever** in the game's addon list and open your character sheet. Hover a resistance row, or open the **pet character panel** and hover its corresponding resistance row. No slash commands or settings screen are defined by the current source; the addon does not write SavedVariables.
 
-The [v1.0.2 GitHub release](https://github.com/babunidev/ResistForever/releases/tag/v1.0.2) was published **October 20, 2026**, but GitHub's release metadata lists **no attached downloadable asset**. Use the repository source rather than assuming a release ZIP exists. This build targets the specific Forever UI conventions used by `CharacterStatFrameScrollBoxIconElementMixin`, `PaperDollStatTooltip` and the 16001 interface—not ordinary Vanilla 1.12 or modern retail WoW by default.
+The [v1.0.2 GitHub release](https://github.com/babunidev/ResistForever/releases/tag/v1.0.2) was published **October 20, 2026** without an attached GitHub ZIP asset. CurseForge is separately installable for WoW Forever 1.60.1; public cache results confirm the project is active, but this repository does not treat a cached CurseForge page as proof of an exact current file version. This build targets the Forever UI conventions used by `CharacterStatFrameScrollBoxIconElementMixin`, `PaperDollStatTooltip` and interface 16001—not ordinary Vanilla 1.12 or modern retail WoW.
 
 ## How to read the tooltip
 
