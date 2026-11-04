@@ -3,7 +3,7 @@
 **Creative:** Babuni · **Copyright notice:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
 **Method:** Preserves original version facts and adds dated Git context; release or source existence is not proof of independently tested game behavior.
 
-## Unreleased — 1.0.3 launch compatibility polish
+## 1.0.3 — November 4, 2026: launch compatibility polish
 
 - Rechecked the public WoW Forever UI source snapshot for **1.60.1.70790 / Interface 16001**; the paper-doll hooks, player/pet stat panes, resistance-row `numericValue` and four-value `UnitResistance` API used by the addon remain present.
 - Rechecked current `wowsims/forever` research; the 1.0.2 direct-spell resistance and zero-floor base-miss model remains unchanged in 1.0.3.

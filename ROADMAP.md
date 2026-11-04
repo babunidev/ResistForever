@@ -1,6 +1,6 @@
 # ResistForever — verification roadmap and open decisions
 
-**Creative / decision authority:** Babuni. **Current development version:** 1.0.3, interface 16001. **Latest GitHub release:** 1.0.2. This is a prioritized verification proposal, **not approval of new runtime features**.
+**Creative / decision authority:** Babuni. **Release candidate:** 1.0.3, interface 16001. **Latest GitHub release:** 1.0.2. This is a prioritized verification proposal, **not approval of new runtime features**.
 
 ## Implemented in current source
 

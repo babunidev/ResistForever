@@ -1,6 +1,6 @@
 # Resist Forever
 
-**Creative:** Babuni · **Current development version:** 1.0.3 · **Latest GitHub release:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
+**Creative:** Babuni · **Release candidate:** 1.0.3 · **Latest GitHub release:** 1.0.2 · **Target:** World of Warcraft: Forever 1.60.1 · **TOC interface:** 16001 · **License:** [MIT](LICENSE)
 
 **Resist Forever** explains how a character's or pet's magical resistance might affect **direct spell damage**. Hover **Fire, Nature, Frost, Shadow or Arcane resistance** in the character/pet panel to see the chance of each **10% damage-resisted outcome**, together with **base spell miss** against an attacker of a given level.
 
