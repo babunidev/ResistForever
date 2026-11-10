@@ -1,4 +1,4 @@
-# ResistForever — narrative development journal
+# ResistForever — development journal
 
 **Project creative and creative director:** Babuni  
 **Retrospective date:** October 27, 2026 · **Updated:** November 4, 2026  
