@@ -3,6 +3,10 @@
 **Creative:** Babuni · **Copyright notice:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
 **Method:** Preserves original version facts and adds dated Git context; release or source existence is not proof of independently tested game behavior.
 
+## 2026-11-10 — Documentation readability
+
+- Moved detailed formula/API/release research into `docs/MODEL_REFERENCE.md` and rewrote the README for players while preserving verification limits. No resistance calculations, packaged files or game code changed.
+
 ## 1.0.3 — November 4, 2026: launch compatibility polish
 
 **Release record:** annotated Git tag `v1.0.3` points to `8c2856e8600432ae44622c5c70d9e89405ffd466`. CurseForge subsequently showed **v1.0.3** as **Approved**, **Release**, targeting **Forever 1.60.1**. No separate GitHub Release object for v1.0.3 was present when this record was updated. The CurseForge archive contents were not independently opened after publication, so package contents remain verified from source packaging configuration rather than from the published ZIP.
