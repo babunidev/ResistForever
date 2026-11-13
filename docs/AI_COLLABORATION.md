@@ -1,6 +1,8 @@
 # ResistForever — human–AI collaboration and attribution
 
-**Human creative and creative director:** Babuni.  
+Follow [the documentation standard](DOCUMENTATION.md) for first-person author voice throughout project documentation, factual changelogs, and naming the AI tool and verified model for each contribution.
+
+**Human creative and creative director:** Babuni.
 **Scope:** October 27, 2026 repository documentation audit and historically grounded source description.
 
 ## Preserve the human creative contribution
