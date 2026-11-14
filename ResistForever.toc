@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: Resist Forever
 ## Notes: Adds 10%-step partial-resist chances and base spell miss to character and pet resistance tooltips.
-## Author: Babuni.dev
+## Author: Babuni
 ## Version: 1.0.3
 
 ResistForever.lua

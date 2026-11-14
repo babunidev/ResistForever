@@ -1,18 +1,22 @@
 # ResistForever — narrative development journal
 
 **Project creative and creative director:** Babuni  
-**Retrospective date:** October 27, 2026 · **Updated:** November 4, 2026  
+**Retrospective date:** October 27, 2026 · **Updated:** November 14, 2026\
 **Evidence:** actual Git history, README/CHANGELOG, the Lua/TOC, current GitHub release records and the November 4 public Forever UI-source compatibility review. Relevant project conversations inform the creative record where available. The complete original design conversation is not reproduced or invented. Earlier code-line authorship is not inferred from Git alone.
+
+## November 14, 2026 — Writing and author credit
+
+For this pass, I asked OpenAI Codex (GPT-6) to put the project story into my voice, clarify the record of AI contributions, and use Babuni for my addon byline. The earlier byline is still part of the release history.
 
 ## The question behind a resistance number
 
 A number like 90 Fire resistance occupies a very small piece of the World of Warcraft character sheet. But that number prompts more questions than it answers: Does it make the player less likely to be hit by a Fire spell? Does it reduce the damage when a spell lands? If it reduces damage, how much? Does the opponent's level make the investment stronger or weaker?
 
-**Resist Forever** reflects Babuni's interest in making mechanics visible through the game's own interface. Rather than replacing the character pane or inventing a separate calculator that a player has to remember to open, the addon adds a small explanatory table when the player hovers Fire, Nature, Frost, Shadow or Arcane resistance. The same existing tooltip remains in place, and the custom detail follows it.
+With Resist Forever, I wanted to make those mechanics visible in the character sheet. When a player hovers Fire, Nature, Frost, Shadow or Arcane resistance, the addon appends a small table to the game's tooltip.
 
-That restrained design is part of the creative work. The goal is to help the player *interpret the character*, not to perform a combat rotation or turn statistics into a recommendation engine. The tool is particularly appropriate to **World of Warcraft: Forever**, where the resistance rules were changing during the beta period and old Classic assumptions could give confidently incorrect probabilities.
+For this addon, I wanted the tooltip to help players interpret a stat for themselves. That mattered in **World of Warcraft: Forever**, where resistance rules changed during beta and old Classic assumptions could produce misleading odds.
 
-The ownership of this original purpose and its creative direction belongs to **Babuni**. The documentation assistant's later explanations and mathematical summaries are a separate contribution; the Git tree doesn't tell us who typed every earlier implementation function.
+The original idea and creative direction were mine. AI later documented the math and the code. The available history leaves some early implementation attribution open.
 
 ## September 28, 2026 — first public code and an initial theory
 
@@ -64,7 +68,7 @@ On October 26, attribution commits set the TOC and README author to **Babuni.dev
 
 The October 27 documentation audit inspected the current Lua, manifest, original version changelog, Git revisions and release metadata. It confirmed **v1.0.1 and v1.0.2 GitHub releases exist but have no attached binary/ZIP assets**, and expanded eleven Markdown documents to preserve the story behind the numbers.
 
-**Creative contribution:** Babuni conceived and directed the tooltip-explanation project and its evolution. **AI contribution in this session:** code/history review, mathematical interpretation, architecture/UX documentation, source-grounded roadmap and editorial collaboration record. Some prior project discussions addressed the v1.0.2 formula update, but without a complete original back-and-forth and commit attribution this journal does not invent who proposed every mathematical step.
+For the tooltip I envisioned, the October audit explained how the code translated that idea into probabilities. The assistant reviewed the source and wrote the technical and historical documentation. The AI tool and model were not recorded, and the surviving record leaves the origin of some v1.0.2 formula decisions uncertain.
 
 **Actually verified here:** current source formulas, event/UI structure, commit chronology, release metadata, documentation paths and unchanged runtime blobs after the commit. **Not performed:** installing Forever, hovering a live tooltip, exercising secret-value restrictions in game, performing a combat-log probability experiment, or executing automated tests. No tests were committed in the inspected source tree.
 
@@ -86,7 +90,7 @@ The approved release was then tagged as **v1.0.3** on commit `8c2856e8600432ae44
 
 ## A next chapter grounded in the game
 
-The most valuable continuation is empirical: use the actual Forever build and a controlled set of direct magical hits to compare the distribution of observed partial reductions with the displayed 10% buckets, while separately estimating misses and recording any spell-hit/penetration effects. Repeat with a pet and an enemy whose level differs from the defender's.
+For a future check, I want to compare the displayed 10% buckets with controlled direct magical hits in Forever. That would mean tracking misses separately, recording any spell-hit and penetration effects, then repeating the check for a pet and a different-level enemy.
 
 On the user-experience side, see how the tables read after gear changes or a pet summon, and test protected UI states where an apparently fresh level becomes temporarily inaccessible. If a surprising value appears, capture the formula input and the precise game-client version—not just an anecdotal “resists seem wrong.”
 

@@ -3,6 +3,11 @@
 **Creative:** Babuni · **Copyright notice:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
 **Method:** Preserves original version facts and adds dated Git context; release or source existence is not proof of independently tested game behavior.
 
+## 2026-11-14 — Documentation and author credit
+
+- Revised the concept, development journal, and collaboration record for first-person narration and accurate AI attribution.
+- Changed the addon manifest author field to **Babuni**.
+
 ## 2026-11-10 — Documentation readability
 
 - Moved detailed formula/API/release research into `docs/MODEL_REFERENCE.md` and rewrote the README for players while preserving verification limits. No resistance calculations, packaged files or game code changed.
@@ -40,7 +45,7 @@
 - Removed the assumption of an **unavoidable 1% miss floor**; named the result **Base spell miss** because enemy spell-hit bonuses are not known.
 - Updated level-context handling for the current Forever model.
 
-**Not verified by today's documentation pass:** the formula's server-side fidelity in live beta combat; direct/periodic/binary applicability beyond the source's stated distinctions.
+The October 27, 2026 documentation audit verified the source model. Live beta combat validation remained open.
 
 ## 1.0.1 — October 12, 2026: pet panels and Classic-derived miss correction
 
@@ -66,5 +71,3 @@
 - `6c40390c40aa`: update existing **MIT LICENSE** copyright pseudonym to **Babuni.dev**.
 - `61460f5d806f`: add preliminary project concept/architecture/roadmap/decisions/journal.
 - `cf910d4aa211`: link the history documents from README.
-
-Original creative direction belongs to Babuni. The historical Babuni.dev author/copyright fields above are preserved as recorded facts; the expanded October 27 editorial audit records the history and uncertainty without modifying game behavior.

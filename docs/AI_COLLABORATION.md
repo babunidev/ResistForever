@@ -7,7 +7,7 @@ Follow [the documentation standard](DOCUMENTATION.md) for first-person author vo
 
 ## Preserve the human creative contribution
 
-The original concept—make Fire, Nature, Frost, Shadow and Arcane resistance understandable inside the native WoW: Forever character sheet—and its extensions to pets and current target-level comparison belong to Babuni's project direction. A later documentation assistant must not imply it conceived that idea merely because it could read the code and explain it.
+With Resist Forever, I wanted the native character sheet to explain Fire, Nature, Frost, Shadow and Arcane resistance. That direction also shaped the pet tooltip and the comparison against the selected target’s level.
 
 Historical commits establish a **real mathematical iteration**: 1.0.0 Classic-like buckets; 1.0.1 pet support/PvP-PvE miss correction; 1.0.2 Forever 10% steps with a new average formula and base spell miss. The version history cannot establish the full personal design discussion, the author of every formula line or an unrecorded acceptance/rejection. When conversations are available, summarize only those actually observed and publication-safe.
 
@@ -15,7 +15,7 @@ The repository includes an **MIT LICENSE** under Babuni.dev's 2026 notice. Its c
 
 ## Actual AI contribution in this audit
 
-The assistant:
+For the October 27 audit, the assistant did the following. The AI tool and model were not recorded.
 - Recovered the project audit order and identified **ResistForever** as repository **#24** after #23 EnchantVisuals.
 - Read current 1.0.2 Lua, TOC, initial README, three historical changelog versions and October documentation scaffold; reviewed the September 28, October 12 and October 20 source diffs.
 - Checked GitHub release metadata: **v1.0.2/v1.0.1 released with no attached downloadable files**.
@@ -24,6 +24,10 @@ The assistant:
 - Expanded/created the eleven source-grounded project documents, including a narrative development journal and open test/creative choices, without changing executable Lua, TOC, MIT LICENSE or packaging metadata.
 
 This is **analysis, technical explanation and documentation work**. It is **not** a live launch-client combat measurement, proof of in-game tooltip behavior, original authorship of the addon idea or a Babuni-approved new feature.
+
+## November 14 writing and byline revision
+
+At my request, OpenAI Codex (GPT-6) revised the narrative and changelog, recorded gaps in historical AI attribution, and corrected the addon manifest byline. The October 26 commits document the earlier byline, and the MIT notice retains its historical wording.
 
 ## Documentation standard for future changes
 

@@ -7,9 +7,9 @@
 
 Resistance is one of those statistics players can invest in without easily reading what it means in a fight. A Fire resistance number on the character sheet is not intuitively equal to a chance to resist a spell, nor does it say how much damage a successful spell might lose. And the question grows more complicated when the enemy is several levels above or below the defender.
 
-The creative purpose of Resist Forever is to make this **existing character-sheet information** understandable exactly where the player already looks. Instead of opening a calculator, external guide or unrelated addon window, hovering a resistance row extends the same tooltip with a breakdown: **what amount of direct spell damage could be resisted, and how likely is each amount?**
+With Resist Forever, I wanted the resistance stat to make sense right where players encounter it. Hovering over a resistance row extends the tooltip with a breakdown: **what amount of direct spell damage could be resisted, and how likely is each amount?**
 
-The feature is intentionally small. Its ambition is not to build a DPS meter, automatic gearing adviser or comprehensive boss-spell simulator. It gives a player a readable interpretation of their own—or their pet's—defensive statistic and allows them to decide what it means for their equipment and encounters.
+From the start, I wanted a small feature that gives players enough context to interpret their own or their pet's resistance and make their own decisions about gear and encounters.
 
 ## Protect the game interface's continuity
 
@@ -25,7 +25,7 @@ This particular client builds some values as **secret/protected UI numbers**, so
 
 The same restraint applies to mechanics. Spell hit and penetration of an unseen enemy aren't known from the resistance row. Binary spells, periodic ticks and channels are not modeled by the direct-damage distribution. A target with an unknown/skull level isn't silently guessed as “+3.”
 
-This is part of the authored interaction idea: **context-rich estimates, explicitly labeled as estimates**, make resistance easier to learn without turning the addon into an oracle.
+For this tooltip, I wanted estimates that explain what they can tell a player and where the calculation runs out of information.
 
 ## The actual creative iteration
 
@@ -33,4 +33,4 @@ The current program is shaped by a visible calculation evolution. The initial la
 
 That last change is not merely a formatting update: it changed what the numbers *mean*. The source and changelog establish the revision; they don't expose every discussion or prove the underlying combat model against a live test in this review.
 
-**Authorship:** Babuni retains original direction and creative authority. The assistant contribution in this retrospective is source interpretation and documentation; proposed future enhancements are not approved by that act.
+The [collaboration record](docs/AI_COLLABORATION.md) covers my creative direction and the AI-assisted source interpretation and documentation.
