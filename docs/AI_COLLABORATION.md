@@ -2,7 +2,6 @@
 
 Follow [the documentation standard](DOCUMENTATION.md) for first-person author voice throughout project documentation, factual changelogs, and naming the AI tool and verified model for each contribution.
 
-**Human creative and creative director:** Babuni.
 **Scope:** October 27, 2026 repository documentation audit and historically grounded source description.
 
 ## Preserve the human creative contribution
@@ -11,7 +10,7 @@ With Resist Forever, I wanted the native character sheet to explain Fire, Nature
 
 Historical commits establish a **real mathematical iteration**: 1.0.0 Classic-like buckets; 1.0.1 pet support/PvP-PvE miss correction; 1.0.2 Forever 10% steps with a new average formula and base spell miss. The version history cannot establish the full personal design discussion, the author of every formula line or an unrecorded acceptance/rejection. When conversations are available, summarize only those actually observed and publication-safe.
 
-The repository includes an **MIT LICENSE** under Babuni.dev's 2026 notice. Its copyright/source rights should not be silently changed to make AI attribution seem larger.
+The repository includes an **MIT LICENSE** under the 2026 copyright notice. Its copyright/source rights should not be silently changed to make AI attribution seem larger.
 
 ## Actual AI contribution in this audit
 
@@ -23,7 +22,7 @@ For the October 27 audit, the assistant did the following. The AI tool and model
 - Documented stat-row/pet context detection, secure post-hooks, secret-value avoidance, cache freshness labels, unknown-level target omission and event-driven refresh.
 - Expanded/created the eleven source-grounded project documents, including a narrative development journal and open test/creative choices, without changing executable Lua, TOC, MIT LICENSE or packaging metadata.
 
-This is **analysis, technical explanation and documentation work**. It is **not** a live launch-client combat measurement, proof of in-game tooltip behavior, original authorship of the addon idea or a Babuni-approved new feature.
+This is **analysis, technical explanation and documentation work**. It is **not** a live launch-client combat measurement, proof of in-game tooltip behavior, original authorship of the addon idea or a new feature I approved.
 
 ## November 14 writing and byline revision
 
@@ -43,3 +42,7 @@ For every substantial iteration, distinguish and preserve:
 Keep private conversations out of public docs; summarize them accurately when needed, without unrelated personal details. Use synthetic numerical examples instead of personal player/game telemetry.
 
 **The October 27 audit is documentation only.** The current code's math and graphical behavior remain untouched; only further independent testing can validate the modeled odds in live gameplay.
+
+## 18 November 2026 — Collaboration record review
+
+At my request, Codex (GPT-6) revised this record for first-person voice and checked the attribution against the available repository documentation. Where an earlier AI tool or model is missing from the record, its identity remains unconfirmed.
