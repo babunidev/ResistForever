@@ -1,48 +1,27 @@
-# ResistForever — human–AI collaboration and attribution
+# Human–AI collaboration
 
-Follow [the documentation standard](DOCUMENTATION.md) for first-person author voice throughout project documentation, factual changelogs, and naming the AI tool and verified model for each contribution.
+## How I work with AI
 
-**Scope:** October 27, 2026 repository documentation audit and historically grounded source description.
+Every project here begins with something I want to see in a game, on a screen or in a story. The ideas, the direction and the decisions are mine, and so are the playtests and the checks on my own devices. AI helps me get there. In my early projects that meant asking ChatGPT for Lua in a conversation, copying the changes into local files and trying them in the game. Today coding agents work directly in the repositories: they research, write code and documentation and run tests, while I decide what to build, try it out and say what works and what doesn't.
 
-## Preserve the human creative contribution
+Two rules hold this record together. Work is credited to whoever did it: the story is told in my voice, but when AI wrote code or a document, the record says so and names the tool and, where it is known, the model. And a plan is not a result: proposed, accepted, built, tested and published stay separate, and an automated test by an AI is not the same as my own check in the game or on my phone.
 
-With Resist Forever, I wanted the native character sheet to explain Fire, Nature, Frost, Shadow and Arcane resistance. That direction also shaped the pet tooltip and the comparison against the selected target’s level.
+## Who did what
 
-Historical commits establish a **real mathematical iteration**: 1.0.0 Classic-like buckets; 1.0.1 pet support/PvP-PvE miss correction; 1.0.2 Forever 10% steps with a new average formula and base spell miss. The version history cannot establish the full personal design discussion, the author of every formula line or an unrecorded acceptance/rejection. When conversations are available, summarize only those actually observed and publication-safe.
+| Who | Role | Model as recorded |
+| --- | --- | --- |
+| **Babuni** | Creative: ideas, direction, decisions, corrections, playtesting and device checks | — |
+| **Codex** | Coding agent in the repository: research, code, documentation and tests | GPT-6 |
+| **Claude Code** | Coding agent in the repository: research, code, documentation and tests | Claude Opus 5.5 |
+| **Earlier AI help** | Work that older entries describe only as “AI” | Tool and model not recorded |
 
-The repository includes an **MIT LICENSE** under the 2026 copyright notice. Its copyright/source rights should not be silently changed to make AI attribution seem larger.
+The journal and the changelog name the tool for each piece of AI work. A model that was not recorded stays unrecorded rather than guessed.
 
-## Actual AI contribution in this audit
+## Where the details are
 
-For the October 27 audit, the assistant did the following. The AI tool and model were not recorded.
-- Recovered the project audit order and identified **ResistForever** as repository **#24** after #23 EnchantVisuals.
-- Read current 1.0.2 Lua, TOC, initial README, three historical changelog versions and October documentation scaffold; reviewed the September 28, October 12 and October 20 source diffs.
-- Checked GitHub release metadata: **v1.0.2/v1.0.1 released with no attached downloadable files**.
-- Explained the **`R/(R+9L)`** direct-spell average, discrete 10% partial-resist buckets, mean/edge distribution, separate level-based base miss and absent unavoidable 1% floor.
-- Documented stat-row/pet context detection, secure post-hooks, secret-value avoidance, cache freshness labels, unknown-level target omission and event-driven refresh.
-- Expanded/created the eleven source-grounded project documents, including a narrative development journal and open test/creative choices, without changing executable Lua, TOC, MIT LICENSE or packaging metadata.
+- [Development journal](DEVLOG.md): the story of the project in my voice, including what I asked for and what AI did.
+- [Decision record](DECISIONS.md): what was decided, by whom and why.
+- [Changelog](../CHANGELOG.md): what changed and how it was checked.
+- [Documentation standard](DOCUMENTATION.md) and [AGENTS.md](../AGENTS.md): the writing and working rules for everyone who contributes, human or AI.
 
-This is **analysis, technical explanation and documentation work**. It is **not** a live launch-client combat measurement, proof of in-game tooltip behavior, original authorship of the addon idea or a new feature I approved.
-
-## November 14 writing and byline revision
-
-At my request, OpenAI Codex (GPT-6) revised the narrative and changelog, recorded gaps in historical AI attribution, and corrected the addon manifest byline. The October 26 commits document the earlier byline, and the MIT notice retains its historical wording.
-
-## Documentation standard for future changes
-
-For every substantial iteration, distinguish and preserve:
-
-1. **User direction:** desired feature/feeling, original reasons and firm constraints.
-2. **AI contribution:** actual proposals, mathematical research, generated code/docs and implementation changes.
-3. **Creative iteration:** rejected approximations, misunderstandings, bug reports, competing models and corrections.
-4. **Creative decisions:** explicit approvals, rejections or postponements; never turn a roadmap idea into assumed consent.
-5. **Implementation:** precise changed files, commit IDs/version tags and source-level behavior.
-6. **Verification:** test commands, environment/client build, observed results and what remains unverified.
-
-Keep private conversations out of public docs; summarize them accurately when needed, without unrelated personal details. Use synthetic numerical examples instead of personal player/game telemetry.
-
-**The October 27 audit is documentation only.** The current code's math and graphical behavior remain untouched; only further independent testing can validate the modeled odds in live gameplay.
-
-## 18 November 2026 — Collaboration record review
-
-At my request, Codex (GPT-6) revised this record for first-person voice and checked the attribution against the available repository documentation. Where an earlier AI tool or model is missing from the record, its identity remains unconfirmed.
+The earlier, longer version of this record, as it stood on 18 November 2026, is kept in the [Git history](https://github.com/babunidev/ResistForever/blob/f17b9d1160e5d3991ecad6eed4f249e4276a724c/docs/AI_COLLABORATION.md).
