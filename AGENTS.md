@@ -6,7 +6,7 @@
 
 The tool is a **small educational extension to Blizzard's existing character/pet resistance tooltip**. Do not replace the character sheet, invent a gear optimizer, make combat decisions for the player, or attribute the creative's original idea to AI. The addon must retain five schools (Fire/Nature/Frost/Shadow/Arcane), current/target attacker-level contexts, clearly labeled base misses, and **10%-step direct-spell partial reductions** unless Babuni approves changes.
 
-Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` files, the entire `ResistForever.lua` and its TOC before touching code.
+Read `README.md`, `CHANGELOG.md`, `docs/CONCEPT.md`, `docs/ROADMAP.md`, relevant `docs/` files, the entire `ResistForever.lua` and its TOC before touching code.
 
 ## Gameplay and data constraints
 
@@ -27,7 +27,7 @@ Read `README.md`, `CHANGELOG.md`, `CONCEPT.md`, `ROADMAP.md`, relevant `docs/` f
 1. Record exact user request, goal and nonnegotiable constraints.
 2. Separate AI proposals/alternatives from *approved* creative decisions.
 3. Run pure math tests, manual UI checks and real combat-log comparisons where relevant; record environment and actual output. Mock tests do not substitute for the target client.
-4. For future changes update `README.md`, `CONCEPT.md`, `ROADMAP.md`, `CHANGELOG.md`, `AGENTS.md`, `docs/ARCHITECTURE.md`, `DESIGN.md`, `CONTENT.md`, `DECISIONS.md`, `DEVLOG.md`, `AI_COLLABORATION.md` as appropriate.
+4. For future changes update `README.md`, `docs/CONCEPT.md`, `docs/ROADMAP.md`, `CHANGELOG.md`, `AGENTS.md`, `docs/ARCHITECTURE.md`, `DESIGN.md`, `CONTENT.md`, `DECISIONS.md`, `DEVLOG.md`, `AI_COLLABORATION.md` as appropriate.
 5. Preserve original Babuni authorship, earlier discarded models as history, and the **MIT LICENSE** with its notice.
 6. Avoid publishing private player names, selected target identity, real saved data, account details or raw chats. Use synthetic math examples.
 
@@ -36,3 +36,7 @@ The October 27, 2026 repository audit is **documentation-only**. It does not app
 ## Repository-local documentation standard
 
 Follow [the documentation standard](docs/DOCUMENTATION.md) for first-person author voice throughout project documentation, factual changelogs, and naming the AI tool and verified model for each contribution. These rules travel with this repository and do not depend on the babuni.dev ChatGPT Project. Preserve all project-specific technical, creative, canon, safety, licensing, and historical rules in this file; follow the linked standard for public first-person narrative, human–AI attribution, concise development journals, decision records, and evidence-based verification. **Babuni** is the human creative; **babuni.dev** is the website/portfolio, not the person. Preserve third-party credits and historical legal notices. References above to a dated “documentation-only audit” describe that past task, not a permanent ban on later authorized implementation.
+
+## Repository layout
+
+The repository root holds only `README.md`, `AGENTS.md`, `LICENSE` and `CHANGELOG.md` (plus any additional license files). All other documentation lives in `docs/`; put new documents there.

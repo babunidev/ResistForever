@@ -49,10 +49,10 @@ Consult the [changelog](CHANGELOG.md) and [technical reference](docs/MODEL_REFER
 
 | Topic | Document |
 | --- | --- |
-| Why the addon exists | [Concept](CONCEPT.md) |
+| Why the addon exists | [Concept](docs/CONCEPT.md) |
 | Detailed math and API research | [Model reference](docs/MODEL_REFERENCE.md) · [Architecture](docs/ARCHITECTURE.md) |
 | Decisions and trade-offs | [Decisions](docs/DECISIONS.md) |
-| Progress and verified changes | [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md) |
+| Progress and verified changes | [Roadmap](docs/ROADMAP.md) · [Changelog](CHANGELOG.md) |
 | Project history | [Development journal](docs/DEVLOG.md) · [AI collaboration](docs/AI_COLLABORATION.md) |
 | Working on the source | [AGENTS.md](AGENTS.md) · [Documentation standard](docs/DOCUMENTATION.md) |
 

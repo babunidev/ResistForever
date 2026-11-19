@@ -33,4 +33,4 @@ The current program is shaped by a visible calculation evolution. The initial la
 
 That last change is not merely a formatting update: it changed what the numbers *mean*. The source and changelog establish the revision; they don't expose every discussion or prove the underlying combat model against a live test in this review.
 
-The [collaboration record](docs/AI_COLLABORATION.md) covers my creative direction and the AI-assisted source interpretation and documentation.
+The [collaboration record](AI_COLLABORATION.md) covers my creative direction and the AI-assisted source interpretation and documentation.

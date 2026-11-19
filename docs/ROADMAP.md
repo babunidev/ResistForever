@@ -39,7 +39,7 @@
 16. Keep the bounded pure-Lua production-math regression harness passing. Tooltip/context behavior still requires client-side verification because the current harness intentionally avoids mocking Blizzard frames.
 17. Release publication is confirmed for CurseForge v1.0.3 and the Git tag. Packaging is configured for a minimal `ResistForever` folder containing only `ResistForever.toc`, `ResistForever.lua`, and `LICENSE`; `CHANGELOG.md` remains the manual release-note source but is ignored from the ZIP. **Still pending:** inspect the actual generated CurseForge archive contents and, if desired, create the separate GitHub Release object for v1.0.3.
 18. Keep checking exact 1.60.1 builds, secret-value API changes and future Forever resistance revisions before promising compatibility beyond what has been verified. Public source compatibility was rechecked at **1.60.1.70790**; live launch-client behavior still needs confirmation.
-19. Preserve the repository's existing [MIT license](LICENSE), its Babuni.dev copyright notice and accurate source attribution.
+19. Preserve the repository's existing [MIT license](../LICENSE), its Babuni.dev copyright notice and accurate source attribution.
 
 ## Pending creative decisions (not approved)
 

@@ -3,6 +3,10 @@
 **Creative:** Babuni · **Copyright notice:** Babuni.dev · **Target:** WoW: Forever, interface 16001.  
 **Method:** Preserves original version facts and adds dated Git context; release or source existence is not proof of independently tested game behavior.
 
+## 2026-11-19 — documentation moved into `docs/`
+
+- Moved `CONCEPT.md` and `ROADMAP.md` into `docs/`. The root keeps only `README.md`, `AGENTS.md`, `LICENSE` and `CHANGELOG.md`; links to the moved files and the documentation rules in `AGENTS.md` were updated. No code changed. Claude Code (Claude Opus 5.5).
+
 ## 2026-11-14 — Documentation and author credit
 
 - Revised the concept, development journal, and collaboration record for first-person narration and accurate AI attribution.
